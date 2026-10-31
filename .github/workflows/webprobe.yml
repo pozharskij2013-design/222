@@ -8,23 +8,16 @@ permissions:
 jobs:
   webprobe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - name: Probe web instance
         run: |
           set +e
-          {
-            hostname
-            getent hosts 9taux6shw8cpbvs5.instances.ctfcup.online
-            curl -vk --connect-timeout 10 --max-time 25 http://9taux6shw8cpbvs5.instances.ctfcup.online/
-            echo '--- curl https ---'
-            curl -vk --connect-timeout 10 --max-time 25 https://9taux6shw8cpbvs5.instances.ctfcup.online/
-            echo '--- python SSRF scan ---'
-            python3 webprobe/probe2.py
-          } > /tmp/run.log 2>&1
           mkdir -p /tmp/web-out
-          cp /tmp/run.log /tmp/web-out/RUN.log || true
+          python3 -m pip install -q Flask >/tmp/pip.log 2>&1 || true
+          python3 -u webprobe/probe3.py 2>&1 | tee /tmp/web-out/RUN.log
+          cp /tmp/pip.log /tmp/web-out/PIP.log || true
       - name: Save web probe output
         if: always()
         run: |
