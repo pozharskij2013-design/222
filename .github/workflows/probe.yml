@@ -3,20 +3,40 @@ on:
   push:
     branches: ["arena/c1306650-222"]
     paths: ["probe/**", ".github/workflows/probe.yml"]
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Probe SSH instance
         run: |
+          set +e
+          exec > /tmp/probe_out.txt 2>&1
           set -x
-          getent hosts instances.ctfcup.online || true
-          timeout 10 bash -c 'exec 3<>/dev/tcp/instances.ctfcup.online/22; head -c 200 <&3' || true
-          ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
+          getent hosts instances.ctfcup.online
+          timeout 10 bash -c 'exec 3<>/dev/tcp/instances.ctfcup.online/22; head -c 200 <&3; echo'
           mkdir -p ~/.ssh
-          timeout 20 ssh-keyscan -v instances.ctfcup.online 2>&1 | head -n 50 || true
+          ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
+          timeout 20 ssh-keyscan -v instances.ctfcup.online 2>&1 | head -n 80
           timeout 30 ssh -vvv -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
             -o BatchMode=yes -o ConnectTimeout=15 \
-            icssys2xpbxp94s8@instances.ctfcup.online 'echo CONNECTED; id; uname -a; pwd; ls -la' 2>&1 | tail -n 120 || true
+            icssys2xpbxp94s8@instances.ctfcup.online 'echo CONNECTED; id; uname -a; pwd; ls -la' 2>&1 | tail -n 200
+          echo "ssh exit: $?"
+      - name: Save output to repo and artifact
+        if: always()
+        run: |
+          mkdir -p probe-out
+          cp /tmp/probe_out.txt probe-out/probe.txt || echo "no output" > probe-out/probe.txt
+          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git add probe-out/probe.txt
+          git commit -m "probe output [skip ci]" || exit 0
+          git push origin HEAD:arena/c1306650-222
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: probe-out
+          path: /tmp/probe_out.txt
