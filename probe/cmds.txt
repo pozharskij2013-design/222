@@ -1,22 +1,6 @@
 export PS1='P> '
-echo __S4__
-ls -la /usr/lib/ghostvector
-cat /proc/meminfo
-ls -la /proc/55/fd
-cat /proc/55/status
-cat /proc/55/maps
-echo "maps rc=$?"
-ls -la /sys/module/ghostvector_lab/sections
-ls -la /proc/kallsyms /proc/kcore /dev/mem /dev/kmem
-cat /proc/sys/kernel/kptr_restrict
-cat /proc/sys/kernel/perf_event_paranoid
-echo BEGIN_GVLIB
-cat /usr/lib/ghostvector/*
-echo BEGIN_FLAGD_BIN
-cat /usr/sbin/flagd
-echo BEGIN_VECDIAG_BIN
-cat /usr/bin/vecdiag
-echo BEGIN_KO_BIN
-cat /lib/modules/ghostvector_lab.ko
-echo END_ALL_BINS
-echo __E4__
+echo __HEALTH__
+cat /proc/uptime
+cat /proc/loadavg
+ls -la /tmp
+echo __HEND__
