@@ -11,32 +11,20 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Probe SSH instance
+      - name: Run commands on instance via PTY
         run: |
-          set +e
-          exec > /tmp/probe_out.txt 2>&1
-          set -x
-          getent hosts instances.ctfcup.online
-          timeout 10 bash -c 'exec 3<>/dev/tcp/instances.ctfcup.online/22; head -c 200 <&3; echo'
           mkdir -p ~/.ssh
           ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
-          timeout 20 ssh-keyscan -v instances.ctfcup.online 2>&1 | head -n 80
-          timeout 30 ssh -vvv -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-            -o BatchMode=yes -o ConnectTimeout=15 \
-            icssys2xpbxp94s8@instances.ctfcup.online 'echo CONNECTED; id; uname -a; pwd; ls -la' 2>&1 | tail -n 200
-          echo "ssh exit: $?"
-      - name: Save output to repo and artifact
+          python3 probe/drive.py || true
+          # strip ANSI escapes and CR for readability
+          sed -e 's/\x1b\[[0-9;?]*[a-zA-Z]//g' -e 's/\r//g' /tmp/out.txt > /tmp/out_clean.txt || true
+      - name: Save output to repo
         if: always()
         run: |
           mkdir -p probe-out
-          cp /tmp/probe_out.txt probe-out/probe.txt || echo "no output" > probe-out/probe.txt
+          cp /tmp/out_clean.txt probe-out/out.txt 2>/dev/null || echo "no output" > probe-out/out.txt
           git config user.email "actions@github.com"
           git config user.name "github-actions"
-          git add probe-out/probe.txt
-          git commit -m "probe output [skip ci]" || exit 0
+          git add probe-out/out.txt
+          git commit -m "instance output [skip ci]" || exit 0
           git push origin HEAD:arena/c1306650-222
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: probe-out
-          path: /tmp/probe_out.txt
