@@ -1,0 +1,22 @@
+name: probe
+on:
+  push:
+    branches: ["arena/c1306650-222"]
+    paths: ["probe/**", ".github/workflows/probe.yml"]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe SSH instance
+        run: |
+          set -x
+          getent hosts instances.ctfcup.online || true
+          timeout 10 bash -c 'exec 3<>/dev/tcp/instances.ctfcup.online/22; head -c 200 <&3' || true
+          ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
+          mkdir -p ~/.ssh
+          timeout 20 ssh-keyscan -v instances.ctfcup.online 2>&1 | head -n 50 || true
+          timeout 30 ssh -vvv -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+            -o BatchMode=yes -o ConnectTimeout=15 \
+            icssys2xpbxp94s8@instances.ctfcup.online 'echo CONNECTED; id; uname -a; pwd; ls -la' 2>&1 | tail -n 120 || true
