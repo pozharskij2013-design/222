@@ -26,7 +26,7 @@ jobs:
             echo "ld rc=$?"
             ls -l /tmp/exp
           } > /tmp/build.log 2>&1
-          python3 probe/drive2.py /tmp/exp || true
+          python3 probe/drive.py || true
           # strip ANSI escapes and CR for readability
           sed -e 's/\x1b\[[0-9;?]*[a-zA-Z]//g' -e 's/\r//g' /tmp/out.txt > /tmp/out_clean.txt || true
       - name: Save output to repo

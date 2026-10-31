@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, pty, select, subprocess, sys, time, signal
 
-HOST = "icssys2xpbxp94s8@instances.ctfcup.online"
+HOST = "1ses0iy04xqobymh@instances.ctfcup.online"
 cmds = open("probe/cmds.txt", "rb").read()
 timeout_total = int(os.environ.get("DRIVE_TIMEOUT", "90"))
 
