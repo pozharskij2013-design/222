@@ -74,7 +74,9 @@ _start:
     mv s1, a0               # base VA
     li t0, 0x1122334455667788
     sd t0, 0(s1)
-    sd t0, 0x1000(s1)
+    li t2, 0x1000
+    add t2, s1, t2
+    sd t0, 0(t2)
 
     # openat(-100, "/dev/ghostvector", O_RDWR, 0)
     li a0, -100
@@ -113,7 +115,8 @@ _start:
     call print_hex64
 
     # ioctl for VA+0x1000 -> expect pte_pa+8
-    addi t1, s1, 0x1000
+    li t1, 0x1000
+    add t1, s1, t1
     sd t1, 0(sp)
     sd zero, 8(sp)
     sd zero, 16(sp)
