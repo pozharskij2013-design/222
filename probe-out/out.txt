@@ -1,0 +1,841 @@
+
+
+BusyBox v1.36.1 (2026-10-28 20:08:36 MSK) built-in shell (ash)
+
+export TERM=dumb PS1='PROMPT> '
+
+echo __START__
+
+id
+
+whoami
+
+hostname
+
+uname -a
+
+cat /proc/cpuinfo
+
+cat /proc/cmdline
+
+pwd
+
+ls -la
+
+ls -la /
+
+ls -la /home /root /opt 2>&1
+
+ls -la /dev
+
+cat /proc/iomem
+
+cat /proc/devices
+
+cat /proc/interrupts
+
+cat /proc/modules
+
+ls -la /sys/class
+
+ls -la /sys/bus/pci/devices/ 2>&1
+
+ls -la /sys/class/uio /sys/class/misc 2>&1
+
+which python3 python gcc cc clang make busybox devmem xxd hexdump od dd strace gdb socat nc curl wget file readelf objdump lspci setpci 2>&1
+
+busybox --list 2>/dev/null | tr '\n' ' '; echo
+
+mount
+
+df -h
+
+env
+
+cat /etc/passwd
+
+ls -la /usr/bin /usr/local/bin /usr/sbin 2>&1 | head -n 300
+
+find / -xdev \( -iname '*flag*' -o -iname '*accel*' -o -iname '*calib*' -o -iname '*dma*' -o -iname '*secret*' -o -iname '*.ko' \) 2>/dev/null | head -n 300
+
+dmesg 2>&1 | head -n 400
+
+echo __END__
+
+echo DONE_$((6*7))
+
+$ PROMPT> PROMPT> __START__
+PROMPT> PROMPT> -sh: id: not found
+PROMPT> PROMPT> -sh: whoami: not found
+PROMPT> PROMPT> -sh: hostname: not found
+PROMPT> PROMPT> -sh: uname: not found
+PROMPT> PROMPT> processor	: 0
+hart		: 0
+isa		: rv64imafdcvh_zicbom_zicboz_zicntr_zicsr_zifencei_zihintntl_zihintpause_zihpm_zawrs_zfa_zca_zcd_zba_zbb_zbc_zbs_zve32f_zve32x_zve64d_zve64f_zve64x_sstc_svvptc
+mmu		: sv57
+mvendorid	: 0x0
+marchid		: 0x0
+mimpid		: 0x0
+hart isa	: rv64imafdcvh_zicbom_zicboz_zicntr_zicsr_zifencei_zihintntl_zihintpause_zihpm_zawrs_zfa_zca_zcd_zba_zbb_zbc_zbs_zve32f_zve32x_zve64d_zve64f_zve64x_sstc_svvptc
+
+PROMPT> PROMPT> console=ttyS0 panic=-1 ip=dhcp
+PROMPT> PROMPT> /home/user
+PROMPT> PROMPT> drwxr-xr-x    3        60 ..
+drwx------    2        40 .
+PROMPT> PROMPT> drwxr-xr-x    5       100 usr
+drwxrwxrwt    2        40 tmp
+dr-xr-xr-x   12         0 sys
+drwxr-xr-x    2       120 sbin
+drwxr-xr-x    2        80 run
+dr-xr-xr-x   98         0 proc
+drwxr-xr-x    3        60 lib
+-rwxr-xr-x    1      1947 init
+drwxr-xr-x    3        60 home
+drwxr-xr-x    2       100 etc
+drwxr-xr-x    2       240 bin
+drwx------    2        40 root
+drwxr-xr-x    4     12300 dev
+drwxr-xr-x   14       300 ..
+drwxr-xr-x   14       300 .
+PROMPT> PROMPT> ls: /opt: No such file or directory
+/root:
+ls: can't open '/root': Permission denied
+
+/home:
+drwx------    2        40 user
+drwxr-xr-x   14       300 ..
+drwxr-xr-x    3        60 .
+PROMPT> PROMPT> crw-rw-rw-    1  243,   0 ghostvector
+drwxr-xr-x    2         0 pts
+crw-------    1   10, 127 cpu_dma_latency
+crw-------    1  248,   0 rtc0
+drwxr-xr-x    2        60 input
+brw-------    1    7,   7 loop7
+brw-------    1    7,   6 loop6
+brw-------    1    7,   5 loop5
+brw-------    1    7,   4 loop4
+brw-------    1    7,   3 loop3
+brw-------    1    7,   2 loop2
+brw-------    1    7,   1 loop1
+brw-------    1    7,   0 loop0
+crw-------    1   10, 237 loop-control
+crw-------    1    4,  64 ttyS0
+crw-------    1    4,  67 ttyS3
+crw-------    1    4,  66 ttyS2
+crw-------    1    4,  65 ttyS1
+crw-rw-rw-    1    5,   2 ptmx
+crw-------    1    3, 255 ttyef
+crw-------    1    3, 254 ttyee
+crw-------    1    3, 253 ttyed
+crw-------    1    3, 252 ttyec
+crw-------    1    3, 251 ttyeb
+crw-------    1    3, 250 ttyea
+crw-------    1    3, 249 ttye9
+crw-------    1    3, 248 ttye8
+crw-------    1    3, 247 ttye7
+crw-------    1    3, 246 ttye6
+crw-------    1    3, 245 ttye5
+crw-------    1    3, 244 ttye4
+crw-------    1    3, 243 ttye3
+crw-------    1    3, 242 ttye2
+crw-------    1    3, 241 ttye1
+crw-------    1    3, 240 ttye0
+crw-------    1    3, 239 ttydf
+crw-------    1    3, 238 ttyde
+crw-------    1    3, 237 ttydd
+crw-------    1    3, 236 ttydc
+crw-------    1    3, 235 ttydb
+crw-------    1    3, 234 ttyda
+crw-------    1    3, 233 ttyd9
+crw-------    1    3, 232 ttyd8
+crw-------    1    3, 231 ttyd7
+crw-------    1    3, 230 ttyd6
+crw-------    1    3, 229 ttyd5
+crw-------    1    3, 228 ttyd4
+crw-------    1    3, 227 ttyd3
+crw-------    1    3, 226 ttyd2
+crw-------    1    3, 225 ttyd1
+crw-------    1    3, 224 ttyd0
+crw-------    1    3, 223 ttycf
+crw-------    1    3, 222 ttyce
+crw-------    1    3, 221 ttycd
+crw-------    1    3, 220 ttycc
+crw-------    1    3, 219 ttycb
+crw-------    1    3, 218 ttyca
+crw-------    1    3, 217 ttyc9
+crw-------    1    3, 216 ttyc8
+crw-------    1    3, 215 ttyc7
+crw-------    1    3, 214 ttyc6
+crw-------    1    3, 213 ttyc5
+crw-------    1    3, 212 ttyc4
+crw-------    1    3, 211 ttyc3
+crw-------    1    3, 210 ttyc2
+crw-------    1    3, 209 ttyc1
+crw-------    1    3, 208 ttyc0
+crw-------    1    3, 207 ttybf
+crw-------    1    3, 206 ttybe
+crw-------    1    3, 205 ttybd
+crw-------    1    3, 204 ttybc
+crw-------    1    3, 203 ttybb
+crw-------    1    3, 202 ttyba
+crw-------    1    3, 201 ttyb9
+crw-------    1    3, 200 ttyb8
+crw-------    1    3, 199 ttyb7
+crw-------    1    3, 198 ttyb6
+crw-------    1    3, 197 ttyb5
+crw-------    1    3, 196 ttyb4
+crw-------    1    3, 195 ttyb3
+crw-------    1    3, 194 ttyb2
+crw-------    1    3, 193 ttyb1
+crw-------    1    3, 192 ttyb0
+crw-------    1    3, 191 ttyaf
+crw-------    1    3, 190 ttyae
+crw-------    1    3, 189 ttyad
+crw-------    1    3, 188 ttyac
+crw-------    1    3, 187 ttyab
+crw-------    1    3, 186 ttyaa
+crw-------    1    3, 185 ttya9
+crw-------    1    3, 184 ttya8
+crw-------    1    3, 183 ttya7
+crw-------    1    3, 182 ttya6
+crw-------    1    3, 181 ttya5
+crw-------    1    3, 180 ttya4
+crw-------    1    3, 179 ttya3
+crw-------    1    3, 178 ttya2
+crw-------    1    3, 177 ttya1
+crw-------    1    3, 176 ttya0
+crw-------    1    3, 175 ttyzf
+crw-------    1    3, 174 ttyze
+crw-------    1    3, 173 ttyzd
+crw-------    1    3, 172 ttyzc
+crw-------    1    3, 171 ttyzb
+crw-------    1    3, 170 ttyza
+crw-------    1    3, 169 ttyz9
+crw-------    1    3, 168 ttyz8
+crw-------    1    3, 167 ttyz7
+crw-------    1    3, 166 ttyz6
+crw-------    1    3, 165 ttyz5
+crw-------    1    3, 164 ttyz4
+crw-------    1    3, 163 ttyz3
+crw-------    1    3, 162 ttyz2
+crw-------    1    3, 161 ttyz1
+crw-------    1    3, 160 ttyz0
+crw-------    1    3, 159 ttyyf
+crw-------    1    3, 158 ttyye
+crw-------    1    3, 157 ttyyd
+crw-------    1    3, 156 ttyyc
+crw-------    1    3, 155 ttyyb
+crw-------    1    3, 154 ttyya
+crw-------    1    3, 153 ttyy9
+crw-------    1    3, 152 ttyy8
+crw-------    1    3, 151 ttyy7
+crw-------    1    3, 150 ttyy6
+crw-------    1    3, 149 ttyy5
+crw-------    1    3, 148 ttyy4
+crw-------    1    3, 147 ttyy3
+crw-------    1    3, 146 ttyy2
+crw-------    1    3, 145 ttyy1
+crw-------    1    3, 144 ttyy0
+crw-------    1    3, 143 ttyxf
+crw-------    1    3, 142 ttyxe
+crw-------    1    3, 141 ttyxd
+crw-------    1    3, 140 ttyxc
+crw-------    1    3, 139 ttyxb
+crw-------    1    3, 138 ttyxa
+crw-------    1    3, 137 ttyx9
+crw-------    1    3, 136 ttyx8
+crw-------    1    3, 135 ttyx7
+crw-------    1    3, 134 ttyx6
+crw-------    1    3, 133 ttyx5
+crw-------    1    3, 132 ttyx4
+crw-------    1    3, 131 ttyx3
+crw-------    1    3, 130 ttyx2
+crw-------    1    3, 129 ttyx1
+crw-------    1    3, 128 ttyx0
+crw-------    1    3, 127 ttywf
+crw-------    1    3, 126 ttywe
+crw-------    1    3, 125 ttywd
+crw-------    1    3, 124 ttywc
+crw-------    1    3, 123 ttywb
+crw-------    1    3, 122 ttywa
+crw-------    1    3, 121 ttyw9
+crw-------    1    3, 120 ttyw8
+crw-------    1    3, 119 ttyw7
+crw-------    1    3, 118 ttyw6
+crw-------    1    3, 117 ttyw5
+crw-------    1    3, 116 ttyw4
+crw-------    1    3, 115 ttyw3
+crw-------    1    3, 114 ttyw2
+crw-------    1    3, 113 ttyw1
+crw-------    1    3, 112 ttyw0
+crw-------    1    3, 111 ttyvf
+crw-------    1    3, 110 ttyve
+crw-------    1    3, 109 ttyvd
+crw-------    1    3, 108 ttyvc
+crw-------    1    3, 107 ttyvb
+crw-------    1    3, 106 ttyva
+crw-------    1    3, 105 ttyv9
+crw-------    1    3, 104 ttyv8
+crw-------    1    3, 103 ttyv7
+crw-------    1    3, 102 ttyv6
+crw-------    1    3, 101 ttyv5
+crw-------    1    3, 100 ttyv4
+crw-------    1    3,  99 ttyv3
+crw-------    1    3,  98 ttyv2
+crw-------    1    3,  97 ttyv1
+crw-------    1    3,  96 ttyv0
+crw-------    1    3,  95 ttyuf
+crw-------    1    3,  94 ttyue
+crw-------    1    3,  93 ttyud
+crw-------    1    3,  92 ttyuc
+crw-------    1    3,  91 ttyub
+crw-------    1    3,  90 ttyua
+crw-------    1    3,  89 ttyu9
+crw-------    1    3,  88 ttyu8
+crw-------    1    3,  87 ttyu7
+crw-------    1    3,  86 ttyu6
+crw-------    1    3,  85 ttyu5
+crw-------    1    3,  84 ttyu4
+crw-------    1    3,  83 ttyu3
+crw-------    1    3,  82 ttyu2
+crw-------    1    3,  81 ttyu1
+crw-------    1    3,  80 ttyu0
+crw-------    1    3,  79 ttytf
+crw-------    1    3,  78 ttyte
+crw-------    1    3,  77 ttytd
+crw-------    1    3,  76 ttytc
+crw-------    1    3,  75 ttytb
+crw-------    1    3,  74 ttyta
+crw-------    1    3,  73 ttyt9
+crw-------    1    3,  72 ttyt8
+crw-------    1    3,  71 ttyt7
+crw-------    1    3,  70 ttyt6
+crw-------    1    3,  69 ttyt5
+crw-------    1    3,  68 ttyt4
+crw-------    1    3,  67 ttyt3
+crw-------    1    3,  66 ttyt2
+crw-------    1    3,  65 ttyt1
+crw-------    1    3,  64 ttyt0
+crw-------    1    3,  63 ttysf
+crw-------    1    3,  62 ttyse
+crw-------    1    3,  61 ttysd
+crw-------    1    3,  60 ttysc
+crw-------    1    3,  59 ttysb
+crw-------    1    3,  58 ttysa
+crw-------    1    3,  57 ttys9
+crw-------    1    3,  56 ttys8
+crw-------    1    3,  55 ttys7
+crw-------    1    3,  54 ttys6
+crw-------    1    3,  53 ttys5
+crw-------    1    3,  52 ttys4
+crw-------    1    3,  51 ttys3
+crw-------    1    3,  50 ttys2
+crw-------    1    3,  49 ttys1
+crw-------    1    3,  48 ttys0
+crw-------    1    3,  47 ttyrf
+crw-------    1    3,  46 ttyre
+crw-------    1    3,  45 ttyrd
+crw-------    1    3,  44 ttyrc
+crw-------    1    3,  43 ttyrb
+crw-------    1    3,  42 ttyra
+crw-------    1    3,  41 ttyr9
+crw-------    1    3,  40 ttyr8
+crw-------    1    3,  39 ttyr7
+crw-------    1    3,  38 ttyr6
+crw-------    1    3,  37 ttyr5
+crw-------    1    3,  36 ttyr4
+crw-------    1    3,  35 ttyr3
+crw-------    1    3,  34 ttyr2
+crw-------    1    3,  33 ttyr1
+crw-------    1    3,  32 ttyr0
+crw-------    1    3,  31 ttyqf
+crw-------    1    3,  30 ttyqe
+crw-------    1    3,  29 ttyqd
+crw-------    1    3,  28 ttyqc
+crw-------    1    3,  27 ttyqb
+crw-------    1    3,  26 ttyqa
+crw-------    1    3,  25 ttyq9
+crw-------    1    3,  24 ttyq8
+crw-------    1    3,  23 ttyq7
+crw-------    1    3,  22 ttyq6
+crw-------    1    3,  21 ttyq5
+crw-------    1    3,  20 ttyq4
+crw-------    1    3,  19 ttyq3
+crw-------    1    3,  18 ttyq2
+crw-------    1    3,  17 ttyq1
+crw-------    1    3,  16 ttyq0
+crw-------    1    3,  15 ttypf
+crw-------    1    3,  14 ttype
+crw-------    1    3,  13 ttypd
+crw-------    1    3,  12 ttypc
+crw-------    1    3,  11 ttypb
+crw-------    1    3,  10 ttypa
+crw-------    1    3,   9 ttyp9
+crw-------    1    3,   8 ttyp8
+crw-------    1    3,   7 ttyp7
+crw-------    1    3,   6 ttyp6
+crw-------    1    3,   5 ttyp5
+crw-------    1    3,   4 ttyp4
+crw-------    1    3,   3 ttyp3
+crw-------    1    3,   2 ttyp2
+crw-------    1    3,   1 ttyp1
+crw-------    1    3,   0 ttyp0
+crw-------    1    2, 255 ptyef
+crw-------    1    2, 254 ptyee
+crw-------    1    2, 253 ptyed
+crw-------    1    2, 252 ptyec
+crw-------    1    2, 251 ptyeb
+crw-------    1    2, 250 ptyea
+crw-------    1    2, 249 ptye9
+crw-------    1    2, 248 ptye8
+crw-------    1    2, 247 ptye7
+crw-------    1    2, 246 ptye6
+crw-------    1    2, 245 ptye5
+crw-------    1    2, 244 ptye4
+crw-------    1    2, 243 ptye3
+crw-------    1    2, 242 ptye2
+crw-------    1    2, 241 ptye1
+crw-------    1    2, 240 ptye0
+crw-------    1    2, 239 ptydf
+crw-------    1    2, 238 ptyde
+crw-------    1    2, 237 ptydd
+crw-------    1    2, 236 ptydc
+crw-------    1    2, 235 ptydb
+crw-------    1    2, 234 ptyda
+crw-------    1    2, 233 ptyd9
+crw-------    1    2, 232 ptyd8
+crw-------    1    2, 231 ptyd7
+crw-------    1    2, 230 ptyd6
+crw-------    1    2, 229 ptyd5
+crw-------    1    2, 228 ptyd4
+crw-------    1    2, 227 ptyd3
+crw-------    1    2, 226 ptyd2
+crw-------    1    2, 225 ptyd1
+crw-------    1    2, 224 ptyd0
+crw-------    1    2, 223 ptycf
+crw-------    1    2, 222 ptyce
+crw-------    1    2, 221 ptycd
+crw-------    1    2, 220 ptycc
+crw-------    1    2, 219 ptycb
+crw-------    1    2, 218 ptyca
+crw-------    1    2, 217 ptyc9
+crw-------    1    2, 216 ptyc8
+crw-------    1    2, 215 ptyc7
+crw-------    1    2, 214 ptyc6
+crw-------    1    2, 213 ptyc5
+crw-------    1    2, 212 ptyc4
+crw-------    1    2, 211 ptyc3
+crw-------    1    2, 210 ptyc2
+crw-------    1    2, 209 ptyc1
+crw-------    1    2, 208 ptyc0
+crw-------    1    2, 207 ptybf
+crw-------    1    2, 206 ptybe
+crw-------    1    2, 205 ptybd
+crw-------    1    2, 204 ptybc
+crw-------    1    2, 203 ptybb
+crw-------    1    2, 202 ptyba
+crw-------    1    2, 201 ptyb9
+crw-------    1    2, 200 ptyb8
+crw-------    1    2, 199 ptyb7
+crw-------    1    2, 198 ptyb6
+crw-------    1    2, 197 ptyb5
+crw-------    1    2, 196 ptyb4
+crw-------    1    2, 195 ptyb3
+crw-------    1    2, 194 ptyb2
+crw-------    1    2, 193 ptyb1
+crw-------    1    2, 192 ptyb0
+crw-------    1    2, 191 ptyaf
+crw-------    1    2, 190 ptyae
+crw-------    1    2, 189 ptyad
+crw-------    1    2, 188 ptyac
+crw-------    1    2, 187 ptyab
+crw-------    1    2, 186 ptyaa
+crw-------    1    2, 185 ptya9
+crw-------    1    2, 184 ptya8
+crw-------    1    2, 183 ptya7
+crw-------    1    2, 182 ptya6
+crw-------    1    2, 181 ptya5
+crw-------    1    2, 180 ptya4
+crw-------    1    2, 179 ptya3
+crw-------    1    2, 178 ptya2
+crw-------    1    2, 177 ptya1
+crw-------    1    2, 176 ptya0
+crw-------    1    2, 175 ptyzf
+crw-------    1    2, 174 ptyze
+crw-------    1    2, 173 ptyzd
+crw-------    1    2, 172 ptyzc
+crw-------    1    2, 171 ptyzb
+crw-------    1    2, 170 ptyza
+crw-------    1    2, 169 ptyz9
+crw-------    1    2, 168 ptyz8
+crw-------    1    2, 167 ptyz7
+crw-------    1    2, 166 ptyz6
+crw-------    1    2, 165 ptyz5
+crw-------    1    2, 164 ptyz4
+crw-------    1    2, 163 ptyz3
+crw-------    1    2, 162 ptyz2
+crw-------    1    2, 161 ptyz1
+crw-------    1    2, 160 ptyz0
+crw-------    1    2, 159 ptyyf
+crw-------    1    2, 158 ptyye
+crw-------    1    2, 157 ptyyd
+crw-------    1    2, 156 ptyyc
+crw-------    1    2, 155 ptyyb
+crw-------    1    2, 154 ptyya
+crw-------    1    2, 153 ptyy9
+crw-------    1    2, 152 ptyy8
+crw-------    1    2, 151 ptyy7
+crw-------    1    2, 150 ptyy6
+crw-------    1    2, 149 ptyy5
+crw-------    1    2, 148 ptyy4
+crw-------    1    2, 147 ptyy3
+crw-------    1    2, 146 ptyy2
+crw-------    1    2, 145 ptyy1
+crw-------    1    2, 144 ptyy0
+crw-------    1    2, 143 ptyxf
+crw-------    1    2, 142 ptyxe
+crw-------    1    2, 141 ptyxd
+crw-------    1    2, 140 ptyxc
+crw-------    1    2, 139 ptyxb
+crw-------    1    2, 138 ptyxa
+crw-------    1    2, 137 ptyx9
+crw-------    1    2, 136 ptyx8
+crw-------    1    2, 135 ptyx7
+crw-------    1    2, 134 ptyx6
+crw-------    1    2, 133 ptyx5
+crw-------    1    2, 132 ptyx4
+crw-------    1    2, 131 ptyx3
+crw-------    1    2, 130 ptyx2
+crw-------    1    2, 129 ptyx1
+crw-------    1    2, 128 ptyx0
+crw-------    1    2, 127 ptywf
+crw-------    1    2, 126 ptywe
+crw-------    1    2, 125 ptywd
+crw-------    1    2, 124 ptywc
+crw-------    1    2, 123 ptywb
+crw-------    1    2, 122 ptywa
+crw-------    1    2, 121 ptyw9
+crw-------    1    2, 120 ptyw8
+crw-------    1    2, 119 ptyw7
+crw-------    1    2, 118 ptyw6
+crw-------    1    2, 117 ptyw5
+crw-------    1    2, 116 ptyw4
+crw-------    1    2, 115 ptyw3
+crw-------    1    2, 114 ptyw2
+crw-------    1    2, 113 ptyw1
+crw-------    1    2, 112 ptyw0
+crw-------    1    2, 111 ptyvf
+crw-------    1    2, 110 ptyve
+crw-------    1    2, 109 ptyvd
+crw-------    1    2, 108 ptyvc
+crw-------    1    2, 107 ptyvb
+crw-------    1    2, 106 ptyva
+crw-------    1    2, 105 ptyv9
+crw-------    1    2, 104 ptyv8
+crw-------    1    2, 103 ptyv7
+crw-------    1    2, 102 ptyv6
+crw-------    1    2, 101 ptyv5
+crw-------    1    2, 100 ptyv4
+crw-------    1    2,  99 ptyv3
+crw-------    1    2,  98 ptyv2
+crw-------    1    2,  97 ptyv1
+crw-------    1    2,  96 ptyv0
+crw-------    1    2,  95 ptyuf
+crw-------    1    2,  94 ptyue
+crw-------    1    2,  93 ptyud
+crw-------    1    2,  92 ptyuc
+crw-------    1    2,  91 ptyub
+crw-------    1    2,  90 ptyua
+crw-------    1    2,  89 ptyu9
+crw-------    1    2,  88 ptyu8
+crw-------    1    2,  87 ptyu7
+crw-------    1    2,  86 ptyu6
+crw-------    1    2,  85 ptyu5
+crw-------    1    2,  84 ptyu4
+crw-------    1    2,  83 ptyu3
+crw-------    1    2,  82 ptyu2
+crw-------    1    2,  81 ptyu1
+crw-------    1    2,  80 ptyu0
+crw-------    1    2,  79 ptytf
+crw-------    1    2,  78 ptyte
+crw-------    1    2,  77 ptytd
+crw-------    1    2,  76 ptytc
+crw-------    1    2,  75 ptytb
+crw-------    1    2,  74 ptyta
+crw-------    1    2,  73 ptyt9
+crw-------    1    2,  72 ptyt8
+crw-------    1    2,  71 ptyt7
+crw-------    1    2,  70 ptyt6
+crw-------    1    2,  69 ptyt5
+crw-------    1    2,  68 ptyt4
+crw-------    1    2,  67 ptyt3
+crw-------    1    2,  66 ptyt2
+crw-------    1    2,  65 ptyt1
+crw-------    1    2,  64 ptyt0
+crw-------    1    2,  63 ptysf
+crw-------    1    2,  62 ptyse
+crw-------    1    2,  61 ptysd
+crw-------    1    2,  60 ptysc
+crw-------    1    2,  59 ptysb
+crw-------    1    2,  58 ptysa
+crw-------    1    2,  57 ptys9
+crw-------    1    2,  56 ptys8
+crw-------    1    2,  55 ptys7
+crw-------    1    2,  54 ptys6
+crw-------    1    2,  53 ptys5
+crw-------    1    2,  52 ptys4
+crw-------    1    2,  51 ptys3
+crw-------    1    2,  50 ptys2
+crw-------    1    2,  49 ptys1
+crw-------    1    2,  48 ptys0
+crw-------    1    2,  47 ptyrf
+crw-------    1    2,  46 ptyre
+crw-------    1    2,  45 ptyrd
+crw-------    1    2,  44 ptyrc
+crw-------    1    2,  43 ptyrb
+crw-------    1    2,  42 ptyra
+crw-------    1    2,  41 ptyr9
+crw-------    1    2,  40 ptyr8
+crw-------    1    2,  39 ptyr7
+crw-------    1    2,  38 ptyr6
+crw-------    1    2,  37 ptyr5
+crw-------    1    2,  36 ptyr4
+crw-------    1    2,  35 ptyr3
+crw-------    1    2,  34 ptyr2
+crw-------    1    2,  33 ptyr1
+crw-------    1    2,  32 ptyr0
+crw-------    1    2,  31 ptyqf
+crw-------    1    2,  30 ptyqe
+crw-------    1    2,  29 ptyqd
+crw-------    1    2,  28 ptyqc
+crw-------    1    2,  27 ptyqb
+crw-------    1    2,  26 ptyqa
+crw-------    1    2,  25 ptyq9
+crw-------    1    2,  24 ptyq8
+crw-------    1    2,  23 ptyq7
+crw-------    1    2,  22 ptyq6
+crw-------    1    2,  21 ptyq5
+crw-------    1    2,  20 ptyq4
+crw-------    1    2,  19 ptyq3
+crw-------    1    2,  18 ptyq2
+crw-------    1    2,  17 ptyq1
+crw-------    1    2,  16 ptyq0
+crw-------    1    2,  15 ptypf
+crw-------    1    2,  14 ptype
+crw-------    1    2,  13 ptypd
+crw-------    1    2,  12 ptypc
+crw-------    1    2,  11 ptypb
+crw-------    1    2,  10 ptypa
+crw-------    1    2,   9 ptyp9
+crw-------    1    2,   8 ptyp8
+crw-------    1    2,   7 ptyp7
+crw-------    1    2,   6 ptyp6
+crw-------    1    2,   5 ptyp5
+crw-------    1    2,   4 ptyp4
+crw-------    1    2,   3 ptyp3
+crw-------    1    2,   2 ptyp2
+crw-------    1    2,   1 ptyp1
+crw-------    1    2,   0 ptyp0
+crw-r--r--    1   10, 235 autofs
+crw-------    1   10, 183 hwrng
+crw-------    1    4,  63 tty63
+crw-------    1    4,  62 tty62
+crw-------    1    4,  61 tty61
+crw-------    1    4,  60 tty60
+crw-------    1    4,  59 tty59
+crw-------    1    4,  58 tty58
+crw-------    1    4,  57 tty57
+crw-------    1    4,  56 tty56
+crw-------    1    4,  55 tty55
+crw-------    1    4,  54 tty54
+crw-------    1    4,  53 tty53
+crw-------    1    4,  52 tty52
+crw-------    1    4,  51 tty51
+crw-------    1    4,  50 tty50
+crw-------    1    4,  49 tty49
+crw-------    1    4,  48 tty48
+crw-------    1    4,  47 tty47
+crw-------    1    4,  46 tty46
+crw-------    1    4,  45 tty45
+crw-------    1    4,  44 tty44
+crw-------    1    4,  43 tty43
+crw-------    1    4,  42 tty42
+crw-------    1    4,  41 tty41
+crw-------    1    4,  40 tty40
+crw-------    1    4,  39 tty39
+crw-------    1    4,  38 tty38
+crw-------    1    4,  37 tty37
+crw-------    1    4,  36 tty36
+crw-------    1    4,  35 tty35
+crw-------    1    4,  34 tty34
+crw-------    1    4,  33 tty33
+crw-------    1    4,  32 tty32
+crw-------    1    4,  31 tty31
+crw-------    1    4,  30 tty30
+crw-------    1    4,  29 tty29
+crw-------    1    4,  28 tty28
+crw-------    1    4,  27 tty27
+crw-------    1    4,  26 tty26
+crw-------    1    4,  25 tty25
+crw-------    1    4,  24 tty24
+crw-------    1    4,  23 tty23
+crw-------    1    4,  22 tty22
+crw-------    1    4,  21 tty21
+crw-------    1    4,  20 tty20
+crw-------    1    4,  19 tty19
+crw-------    1    4,  18 tty18
+crw-------    1    4,  17 tty17
+crw-------    1    4,  16 tty16
+crw-------    1    4,  15 tty15
+crw-------    1    4,  14 tty14
+crw-------    1    4,  13 tty13
+crw-------    1    4,  12 tty12
+crw-------    1    4,  11 tty11
+crw-------    1    4,  10 tty10
+crw-------    1    4,   9 tty9
+crw-------    1    4,   8 tty8
+crw-------    1    4,   7 tty7
+crw-------    1    4,   6 tty6
+crw-------    1    4,   5 tty5
+crw-------    1    4,   4 tty4
+crw-------    1    4,   3 tty3
+crw-------    1    4,   2 tty2
+crw-------    1    4,   1 tty1
+crw-------    1    7, 129 vcsa1
+crw-------    1    7,  65 vcsu1
+crw-------    1    7,   1 vcs1
+crw-------    1    7, 128 vcsa
+crw-------    1    7,  64 vcsu
+crw-------    1    7,   0 vcs
+crw-------    1    4,   0 tty0
+crw-------    1    5,   1 console
+crw-rw-rw-    1    5,   0 tty
+crw-r--r--    1    1,  11 kmsg
+crw-rw-rw-    1    1,   9 urandom
+crw-rw-rw-    1    1,   8 random
+crw-rw-rw-    1    1,   7 full
+crw-rw-rw-    1    1,   5 zero
+crw-------    1    1,   4 port
+crw-rw-rw-    1    1,   3 null
+crw-------    1    1,   1 mem
+drwxr-xr-x   14       300 ..
+drwxr-xr-x    4     12300 .
+PROMPT> PROMPT> 00000000-00000000 : 101000.rtc rtc@101000
+00000000-00000000 : serial
+00000000-00000000 : 10007000.virtio_mmio virtio_mmio@10007000
+00000000-00000000 : 10008000.virtio_mmio virtio_mmio@10008000
+00000000-00000000 : fw_cfg_mem
+00000000-00000000 : Reserved
+00000000-00000000 : System RAM
+  00000000-00000000 : Kernel image
+    00000000-00000000 : Kernel code
+    00000000-00000000 : Kernel rodata
+    00000000-00000000 : Kernel data
+    00000000-00000000 : Kernel bss
+PROMPT> PROMPT> Character devices:
+  1 mem
+  2 pty
+  3 ttyp
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 29 fb
+128 ptm
+136 pts
+243 ghostvector
+244 rpmb
+245 ttySIF
+246 watchdog
+247 iio
+248 rtc
+249 dax
+250 dimmctl
+251 ndctl
+252 rpmsg_ctrl
+253 rpmsg_char
+254 gpiochip
+
+Block devices:
+  7 loop
+179 mmc
+254 virtblk
+259 blkext
+PROMPT> PROMPT>            CPU0       
+ 10:       2513  RISC-V INTC   5 Edge      riscv-timer
+ 12:         32  SiFive PLIC  10 Edge      ttyS0
+ 13:         14  SiFive PLIC   7 Edge      virtio1
+ 14:        198  SiFive PLIC   8 Edge      virtio0
+ 15:          0  SiFive PLIC  11 Edge      101000.rtc
+IPI0:         0  Rescheduling interrupts
+IPI1:         0  Function call interrupts
+IPI2:         0  CPU stop interrupts
+IPI3:         0  CPU stop (for crash dump) interrupts
+IPI4:         0  IRQ work interrupts
+IPI5:         0  Timer broadcast interrupts
+IPI6:         0  CPU backtrace interrupts
+IPI7:         0  KGDB roundup interrupts
+PROMPT> PROMPT> ghostvector_lab 16384 0 - Live 0x0000000000000000 (O)
+PROMPT> PROMPT> drwxr-xr-x    2         0 mmc_host
+drwxr-xr-x    2         0 watchdog
+drwxr-xr-x    2         0 vc
+drwxr-xr-x    2         0 hwmon
+drwxr-xr-x    2         0 rtc
+drwxr-xr-x    2         0 iommu
+drwxr-xr-x    2         0 input
+drwxr-xr-x    2         0 phy
+drwxr-xr-x    2         0 block
+drwxr-xr-x    2         0 bdi
+drwxr-xr-x    2         0 tty
+drwxr-xr-x    2         0 devfreq
+drwxr-xr-x    2         0 mdio_bus
+drwxr-xr-x    2         0 net
+drwxr-xr-x    2         0 virtio-ports
+drwxr-xr-x    2         0 extcon
+drwxr-xr-x    2         0 dma
+drwxr-xr-x    2         0 regulator
+drwxr-xr-x    2         0 misc
+drwxr-xr-x    2         0 devlink
+drwxr-xr-x    2         0 nd
+drwxr-xr-x    2         0 mem
+drwxr-xr-x    2         0 graphics
+drwxr-xr-x    2         0 wakeup
+drwxr-xr-x    2         0 ghostvector
+drwxr-xr-x    2         0 rpmsg
+drwxr-xr-x    2         0 vtconsole
+drwxr-xr-x    2         0 thermal
+dr-xr-xr-x   12         0 ..
+drwxr-xr-x   30         0 .
+PROMPT> PROMPT> ls: /sys/bus/pci/devices/: No such file or directory
+PROMPT> PROMPT> ls: /sys/class/uio: No such file or directory
+/sys/class/misc:
+lrwxrwxrwx    1         0 hw_random -> ../../devices/virtual/misc/hw_random
+lrwxrwxrwx    1         0 cpu_dma_latency -> ../../devices/virtual/misc/cpu_dma_latency
+lrwxrwxrwx    1         0 autofs -> ../../devices/virtual/misc/autofs
+lrwxrwxrwx    1         0 loop-control -> ../../devices/virtual/misc/loop-control
+drwxr-xr-x   30         0 ..
+drwxr-xr-x    2         0 .
+PROMPT> PROMPT> -sh: which: not found
+PROMPT> PROMPT> -sh: tr: not found
+
+PROMPT> PROMPT> rootfs on / type rootfs (rw,size=108616k,nr_inodes=27154)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,relatime)
+devtmpfs on /dev type devtmpfs (rw,relatime,size=108616k,nr_inodes=27154,mode=755)
+devpts on /dev/pts type devpts (rw,relatime,mode=600,ptmxmode=000)
+PROMPT> PROMPT> -sh: df: not found
+PROMPT> PROMPT> -sh: env: not found
+PROMPT> PROMPT> root:x:0:0:root:/root:/bin/sh
+user:x:1000:1000:CTF player:/home/user:/bin/sh
+
+PROMPT> PROMPT> -sh: head: not found
+PROMPT> PROMPT> -sh: head: not found
+PROMPT> PROMPT> -sh: head: not found
+PROMPT> PROMPT> __END__
+PROMPT> PROMPT> -sh: syntax error: support for $((arith)) is disabled
+PROMPT> PROMPT> 
