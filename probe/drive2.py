@@ -70,6 +70,7 @@ hex_ok = b"ABCDE" in testseg
 print("hex_ok:", hex_ok, "testseg:", testseg[-120:], file=sys.stderr)
 
 # upload blob via printf escapes
+FNAME = f"/tmp/e{int(time.time()) % 10000000}"
 CH = 120
 n = 0
 for off in range(0, len(blob), CH):
@@ -80,16 +81,16 @@ for off in range(0, len(blob), CH):
         esc = "".join(f"\\{b:03o}" for b in chunk)
     redir = ">" if off == 0 else ">>"
     marker = f"UPK{n}".encode()
-    ok = cmd(f"printf '{esc}' {redir} /tmp/exp; echo UPK''{n}", marker, 30)
+    ok = cmd(f"printf '{esc}' {redir} {FNAME}; echo UPK''{n}", marker, 30)
     if not ok:
         print(f"upload failed at chunk {n}", file=sys.stderr)
         break
     n += 1
 
-cmd("ls -la /tmp/exp; echo LSZ''1", b"LSZ1", 20)
-cmd("echo BCAT''_S; cat /tmp/exp; echo BCAT''_E", b"BCAT_E", 30)
-cmd("chmod 755 /tmp/exp; echo CHM''1", b"CHM1", 20)
-send("/tmp/exp")
+cmd(f"ls -la {FNAME}; echo LSZ''1", b"LSZ1", 20)
+cmd(f"echo BCAT''_S; cat {FNAME}; echo BCAT''_E", b"BCAT_E", 30)
+cmd(f"chmod 755 {FNAME}; echo CHM''1", b"CHM1", 20)
+send(FNAME)
 send("echo RC=$?; echo ALL''DONE")
 wait_for(b"ALLDONE", 90)
 time.sleep(1)
