@@ -1,147 +1,197 @@
+===== CONNECTIVITY METHOD/BODY FORWARDING TESTS =====
+GET agent-validate body=none -> outer=405 loc='' body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+POST agent-validate body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-validate body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-validate body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-validate body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-validate body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-validate body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-validate body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-validate body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-validate body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-validate body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-validate body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-validate body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-validate body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-validate body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-validate body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+OPTIONS agent-validate body=none -> outer=200 loc='' body=''
+OPTIONS agent-validate body=form-ticket -> outer=200 loc='' body=''
+OPTIONS agent-validate body=json-ticket -> outer=200 loc='' body=''
+OPTIONS agent-validate body=json-valid -> outer=200 loc='' body=''
+OPTIONS agent-validate body=text -> outer=200 loc='' body=''
+HEAD agent-validate body=none -> outer=405 loc='' body=''
+HEAD agent-validate body=form-ticket -> outer=405 loc='' body=''
+HEAD agent-validate body=json-ticket -> outer=405 loc='' body=''
+HEAD agent-validate body=json-valid -> outer=405 loc='' body=''
+HEAD agent-validate body=text -> outer=405 loc='' body=''
+POST agent-validate body=form-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-validate body=json-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+GET+X-HTTP-Method-Override=POST agent-validate -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+GET+X-Method-Override=POST agent-validate -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+GET+X-HTTP-Method=POST agent-validate -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+GET log-ingest body=none -> outer=405 loc='' body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+POST log-ingest body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST log-ingest body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST log-ingest body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST log-ingest body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST log-ingest body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT log-ingest body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT log-ingest body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT log-ingest body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT log-ingest body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT log-ingest body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH log-ingest body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH log-ingest body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH log-ingest body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH log-ingest body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH log-ingest body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+OPTIONS log-ingest body=none -> outer=200 loc='' body=''
+OPTIONS log-ingest body=form-ticket -> outer=200 loc='' body=''
+OPTIONS log-ingest body=json-ticket -> outer=200 loc='' body=''
+OPTIONS log-ingest body=json-valid -> outer=200 loc='' body=''
+OPTIONS log-ingest body=text -> outer=200 loc='' body=''
+HEAD log-ingest body=none -> outer=405 loc='' body=''
+HEAD log-ingest body=form-ticket -> outer=405 loc='' body=''
+HEAD log-ingest body=json-ticket -> outer=405 loc='' body=''
+HEAD log-ingest body=json-valid -> outer=405 loc='' body=''
+HEAD log-ingest body=text -> outer=405 loc='' body=''
+POST log-ingest body=form-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST log-ingest body=json-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+GET+X-HTTP-Method-Override=POST log-ingest -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+GET+X-Method-Override=POST log-ingest -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+GET+X-HTTP-Method=POST log-ingest -> outer=405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+GET self-maintenance body=none -> outer=200 loc='' body='{"body":"<!doctype html>\\n<html lang=\\"ru\\">\\n<head>\\n  <meta charset=\\"utf-8\\">\\n  <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">\\n  <title>Maintenance authorization</title>\\n  <style>\\n    :root { color-scheme: dark; font-family: system-ui, sans-serif; }\\n    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }\\n    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }\\n    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }\\n    button { background: #2a659a; cursor: pointer; }\\n    .error { color: #ff9e9e; }\\n    .muted { color: #9aa9bb; }\\n  </style>\\n</head>\\n<body>\\n  <div class=\\"card\\">\\n    <h1>Maintenance authorization</h1>\\n    <p class=\\"muted\\">Enter the active ticket issued by field-support dispatch.</p>\\n    \\n    <form method=\\"post\\">\\n      <'
+POST self-maintenance body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST self-maintenance body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST self-maintenance body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST self-maintenance body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST self-maintenance body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT self-maintenance body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT self-maintenance body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT self-maintenance body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT self-maintenance body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT self-maintenance body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH self-maintenance body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH self-maintenance body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH self-maintenance body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH self-maintenance body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH self-maintenance body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+OPTIONS self-maintenance body=none -> outer=200 loc='' body=''
+OPTIONS self-maintenance body=form-ticket -> outer=400 loc='' body='Token is not provided. Make sure you send Host header.'
+OPTIONS self-maintenance body=json-ticket -> outer=200 loc='' body=''
+OPTIONS self-maintenance body=json-valid -> outer=200 loc='' body=''
+OPTIONS self-maintenance body=text -> outer=200 loc='' body=''
+HEAD self-maintenance body=none -> outer=200 loc='' body=''
+HEAD self-maintenance body=form-ticket -> outer=200 loc='' body=''
+HEAD self-maintenance body=json-ticket -> outer=200 loc='' body=''
+HEAD self-maintenance body=json-valid -> outer=200 loc='' body=''
+HEAD self-maintenance body=text -> outer=200 loc='' body=''
+POST self-maintenance body=form-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST self-maintenance body=json-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+GET+X-HTTP-Method-Override=POST self-maintenance -> outer=200 body='{"body":"<!doctype html>\\n<html lang=\\"ru\\">\\n<head>\\n  <meta charset=\\"utf-8\\">\\n  <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">\\n  <title>Maintenance authorization</title>\\n  <style>\\n    :root { color-scheme: dark; font-family: system-ui, sans-serif; }\\n    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }\\n    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }\\n    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }\\n    button { background: #2a659a; cursor: pointer; }\\n    .error { color: #ff9e9e; }\\n    .muted { color: #9aa9bb; }\\n  </style>\\n</head>\\n<body>\\n  <div class=\\"card\\">\\n    <h1>Maintenance authorization</h1>\\n    <p class=\\"muted\\">Enter the active ticket issued by field-support dispatch.</p>\\n    \\n    <form method=\\"post\\">\\n      <'
+GET+X-Method-Override=POST self-maintenance -> outer=200 body='{"body":"<!doctype html>\\n<html lang=\\"ru\\">\\n<head>\\n  <meta charset=\\"utf-8\\">\\n  <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">\\n  <title>Maintenance authorization</title>\\n  <style>\\n    :root { color-scheme: dark; font-family: system-ui, sans-serif; }\\n    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }\\n    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }\\n    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }\\n    button { background: #2a659a; cursor: pointer; }\\n    .error { color: #ff9e9e; }\\n    .muted { color: #9aa9bb; }\\n  </style>\\n</head>\\n<body>\\n  <div class=\\"card\\">\\n    <h1>Maintenance authorization</h1>\\n    <p class=\\"muted\\">Enter the active ticket issued by field-support dispatch.</p>\\n    \\n    <form method=\\"post\\">\\n      <'
+GET+X-HTTP-Method=POST self-maintenance -> outer=200 body='{"body":"<!doctype html>\\n<html lang=\\"ru\\">\\n<head>\\n  <meta charset=\\"utf-8\\">\\n  <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">\\n  <title>Maintenance authorization</title>\\n  <style>\\n    :root { color-scheme: dark; font-family: system-ui, sans-serif; }\\n    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }\\n    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }\\n    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }\\n    button { background: #2a659a; cursor: pointer; }\\n    .error { color: #ff9e9e; }\\n    .muted { color: #9aa9bb; }\\n  </style>\\n</head>\\n<body>\\n  <div class=\\"card\\">\\n    <h1>Maintenance authorization</h1>\\n    <p class=\\"muted\\">Enter the active ticket issued by field-support dispatch.</p>\\n    \\n    <form method=\\"post\\">\\n      <'
+GET agent-health body=none -> outer=200 loc='' body='{"body":"{\\"service\\":\\"femto-agent\\",\\"status\\":\\"ok\\"}\\n","status":200,"target":"http://mme-monitor@172.19.0.2:8081/v1/health"}\n'
+POST agent-health body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-health body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-health body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-health body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-health body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-health body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-health body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-health body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-health body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PUT agent-health body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-health body=none -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-health body=form-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-health body=json-ticket -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-health body=json-valid -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+PATCH agent-health body=text -> outer=405 loc='' body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+OPTIONS agent-health body=none -> outer=200 loc='' body=''
+OPTIONS agent-health body=form-ticket -> outer=200 loc='' body=''
+OPTIONS agent-health body=json-ticket -> outer=200 loc='' body=''
+OPTIONS agent-health body=json-valid -> outer=200 loc='' body=''
+OPTIONS agent-health body=text -> outer=200 loc='' body=''
+HEAD agent-health body=none -> outer=200 loc='' body=''
+HEAD agent-health body=form-ticket -> outer=200 loc='' body=''
+HEAD agent-health body=json-ticket -> outer=200 loc='' body=''
+HEAD agent-health body=json-valid -> outer=200 loc='' body=''
+HEAD agent-health body=text -> outer=200 loc='' body=''
+POST agent-health body=form-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+POST agent-health body=json-target -> outer=405 body='<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n'
+GET+X-HTTP-Method-Override=POST agent-health -> outer=200 body='{"body":"{\\"service\\":\\"femto-agent\\",\\"status\\":\\"ok\\"}\\n","status":200,"target":"http://mme-monitor@172.19.0.2:8081/v1/health"}\n'
+GET+X-Method-Override=POST agent-health -> outer=200 body='{"body":"{\\"service\\":\\"femto-agent\\",\\"status\\":\\"ok\\"}\\n","status":200,"target":"http://mme-monitor@172.19.0.2:8081/v1/health"}\n'
+GET+X-HTTP-Method=POST agent-health -> outer=200 body='{"body":"{\\"service\\":\\"femto-agent\\",\\"status\\":\\"ok\\"}\\n","status":200,"target":"http://mme-monitor@172.19.0.2:8081/v1/health"}\n'
 
-===== SANITY =====
-{"target": "http://mme-monitor@172.19.0.2:8081/v1/health", "kind": "http", "outer_status": 200, "elapsed": 2.217, "body": "{\"service\":\"femto-agent\",\"status\":\"ok\"}\n", "status": 200, "phase": "sanity"}
-{"target": "http://mme-monitor@172.19.0.2:8081/health", "kind": "http", "outer_status": 404, "elapsed": 1.117, "body": "<!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\n", "status": 404, "phase": "sanity"}
-{"target": "http://mme-monitor@172.19.0.2:8081/static/dashboard.js", "kind": "http", "outer_status": 200, "elapsed": 0.984, "body": "const backhaulStatus = document.getElementById(\"backhaul-status\");\nconst managementPeer = \"http://mme-monitor:8081/health\";\n\nfetch(`/api/diagnostics/connectivity-test?target=${encodeURIComponent(managementPeer)}`)\n  .then((response) => response.json())\n  .then((result) => {\n    backhaulStatus.textContent = result.status === 200\n      ? \"Backhaul monitor: reachable\"\n      : \"Backhaul monitor: degraded\";\n  })\n  .catch(() => {\n    backhaulStatus.textContent = \"Backhaul monitor: unavailable\";\n  });\n", "status": 200, "phase": "sanity"}
-{"target": "http://mme-monitor@172.19.0.5:8082/v1/health", "kind": "http", "outer_status": 200, "elapsed": 0.962, "body": "{\"service\":\"mme-log-relay\",\"status\":\"ok\"}\n", "status": 200, "phase": "sanity"}
-{"target": "http://mme-monitor@172.19.0.5:8082/health", "kind": "http", "outer_status": 404, "elapsed": 0.339, "body": "<!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\n", "status": 404, "phase": "sanity"}
-{"target": "http://mme-monitor@172.19.0.5:8082/static/dashboard.js", "kind": "http", "outer_status": 200, "elapsed": 1.086, "body": "const backhaulStatus = document.getElementById(\"backhaul-status\");\nconst managementPeer = \"http://mme-monitor:8081/health\";\n\nfetch(`/api/diagnostics/connectivity-test?target=${encodeURIComponent(managementPeer)}`)\n  .then((response) => response.json())\n  .then((result) => {\n    backhaulStatus.textContent = result.status === 200\n      ? \"Backhaul monitor: reachable\"\n      : \"Backhaul monitor: degraded\";\n  })\n  .catch(() => {\n    backhaulStatus.textContent = \"Backhaul monitor: unavailable\";\n  });\n", "status": 200, "phase": "sanity"}
+===== CONNECTIVITY EXTRA PARAMS (method/body/data/header guesses) =====
+extra agent-validate set=0 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=1 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=2 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=3 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=4 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=5 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=6 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=7 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra agent-validate set=8 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate"}\n'
+extra log-ingest set=0 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=1 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=2 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=3 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=4 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=5 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=6 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=7 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
+extra log-ingest set=8 -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.5:8082/v1/ingest"}\n'
 
-===== V1 ROUTE MATRIX: 14650 paths per endpoint =====
+===== GET TARGET CRLF / METHOD SMUGGLING SANITY =====
+smuggle -> 404 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>404 Not Found</title>\\n<h1>Not Found</h1>\\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\\n","status":404,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate%20HTTP/1.1%0d%0aHost:%20172.19.0.2%0d%0aContent-Length:%200%0d%0a%0d%0aPOST%20/v1/maintenance/validate%20HTTP/1.1%0d%0aHost:%20172.19.0.2%0d%0aContent-Length:%200%0d%0a%0d%0a"}\n'
+smuggle -> 404 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>404 Not Found</title>\\n<h1>Not Found</h1>\\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\\n","status":404,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate%0d%0aX-Test:%20x"}\n'
+smuggle -> 404 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>404 Not Found</title>\\n<h1>Not Found</h1>\\n<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>\\n","status":404,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate;method=POST"}\n'
+smuggle -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate?_method=POST"}\n'
+smuggle -> 405 body='{"body":"<!doctype html>\\n<html lang=en>\\n<title>405 Method Not Allowed</title>\\n<h1>Method Not Allowed</h1>\\n<p>The method is not allowed for the requested URL.</p>\\n","status":405,"target":"http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate?ticket=test&device_id=FEMTO-042"}\n'
 
-===== ENDPOINT 172.19.0.2:8081 =====
-[v1-172.19.0.2-8081] 100/14650 elapsed=10.5s
-[v1-172.19.0.2-8081] 200/14650 elapsed=21.9s
-[v1-172.19.0.2-8081] 300/14650 elapsed=31.0s
-[v1-172.19.0.2-8081] 400/14650 elapsed=38.1s
-[v1-172.19.0.2-8081] 500/14650 elapsed=46.4s
-[v1-172.19.0.2-8081] 600/14650 elapsed=54.4s
-[v1-172.19.0.2-8081] 700/14650 elapsed=61.9s
-[v1-172.19.0.2-8081] 800/14650 elapsed=69.5s
-[v1-172.19.0.2-8081] 900/14650 elapsed=77.9s
-[v1-172.19.0.2-8081] 1000/14650 elapsed=86.2s
-[v1-172.19.0.2-8081] 1100/14650 elapsed=94.6s
-[v1-172.19.0.2-8081] 1200/14650 elapsed=103.2s
-[v1-172.19.0.2-8081] 1300/14650 elapsed=110.9s
-[v1-172.19.0.2-8081] 1400/14650 elapsed=119.0s
-[v1-172.19.0.2-8081] 1500/14650 elapsed=126.8s
-[v1-172.19.0.2-8081] 1600/14650 elapsed=134.6s
-[v1-172.19.0.2-8081] 1700/14650 elapsed=143.0s
-[v1-172.19.0.2-8081] 1800/14650 elapsed=151.8s
-[v1-172.19.0.2-8081] 1900/14650 elapsed=160.2s
-[v1-172.19.0.2-8081] 2000/14650 elapsed=167.8s
-[v1-172.19.0.2-8081] 2100/14650 elapsed=176.1s
-[v1-172.19.0.2-8081] 2200/14650 elapsed=183.9s
-[v1-172.19.0.2-8081] 2300/14650 elapsed=202.6s
-[v1-172.19.0.2-8081] 2400/14650 elapsed=250.0s
-[v1-172.19.0.2-8081] 2500/14650 elapsed=276.4s
-[v1-172.19.0.2-8081] 2600/14650 elapsed=289.8s
-[v1-172.19.0.2-8081] 2700/14650 elapsed=300.7s
-[v1-172.19.0.2-8081] 2800/14650 elapsed=309.2s
-[v1-172.19.0.2-8081] 2900/14650 elapsed=317.8s
-[v1-172.19.0.2-8081] 3000/14650 elapsed=325.5s
-[v1-172.19.0.2-8081] 3100/14650 elapsed=333.6s
-[v1-172.19.0.2-8081] 3200/14650 elapsed=341.1s
-[v1-172.19.0.2-8081] 3300/14650 elapsed=349.4s
-[v1-172.19.0.2-8081] 3400/14650 elapsed=357.6s
-[v1-172.19.0.2-8081] 3500/14650 elapsed=365.7s
-[v1-172.19.0.2-8081] 3600/14650 elapsed=373.4s
-[v1-172.19.0.2-8081] 3700/14650 elapsed=381.1s
-[v1-172.19.0.2-8081] 3800/14650 elapsed=389.8s
-[v1-172.19.0.2-8081] 3900/14650 elapsed=398.9s
-[v1-172.19.0.2-8081] 4000/14650 elapsed=407.4s
-[v1-172.19.0.2-8081] 4100/14650 elapsed=415.1s
-[v1-172.19.0.2-8081] 4200/14650 elapsed=423.9s
-[v1-172.19.0.2-8081] 4300/14650 elapsed=431.8s
-[v1-172.19.0.2-8081] 4400/14650 elapsed=439.7s
-[v1-172.19.0.2-8081] 4500/14650 elapsed=448.4s
-[v1-172.19.0.2-8081] 4600/14650 elapsed=457.9s
-[v1-172.19.0.2-8081] 4700/14650 elapsed=477.7s
-[v1-172.19.0.2-8081] 4800/14650 elapsed=520.9s
-[v1-172.19.0.2-8081] 4900/14650 elapsed=548.7s
-[v1-172.19.0.2-8081] 5000/14650 elapsed=562.7s
-[v1-172.19.0.2-8081] 5100/14650 elapsed=574.6s
-[v1-172.19.0.2-8081] 5200/14650 elapsed=583.3s
-[v1-172.19.0.2-8081] 5300/14650 elapsed=591.1s
-[v1-172.19.0.2-8081] 5400/14650 elapsed=600.1s
-[v1-172.19.0.2-8081] 5500/14650 elapsed=608.5s
-[v1-172.19.0.2-8081] 5600/14650 elapsed=617.4s
-[v1-172.19.0.2-8081] 5700/14650 elapsed=627.7s
-[v1-172.19.0.2-8081] 5800/14650 elapsed=641.5s
-[v1-172.19.0.2-8081] 5900/14650 elapsed=652.3s
-[v1-172.19.0.2-8081] 6000/14650 elapsed=663.8s
-[v1-172.19.0.2-8081] 6100/14650 elapsed=672.3s
-[v1-172.19.0.2-8081] 6200/14650 elapsed=680.0s
-[v1-172.19.0.2-8081] 6300/14650 elapsed=688.7s
-[v1-172.19.0.2-8081] 6400/14650 elapsed=697.8s
-[v1-172.19.0.2-8081] 6500/14650 elapsed=705.7s
-[v1-172.19.0.2-8081] 6600/14650 elapsed=714.9s
-[v1-172.19.0.2-8081] 6700/14650 elapsed=723.0s
-HIT {"target": "http://mme-monitor@172.19.0.2:8081/v1/health", "kind": "http", "outer_status": 200, "elapsed": 0.902, "body": "{\"service\":\"femto-agent\",\"status\":\"ok\"}\n", "status": 200, "phase": "v1-172.19.0.2-8081", "job": "/v1/health"}
-[v1-172.19.0.2-8081] 6800/14650 elapsed=731.6s
-[v1-172.19.0.2-8081] 6900/14650 elapsed=740.1s
-[v1-172.19.0.2-8081] 7000/14650 elapsed=748.2s
-[v1-172.19.0.2-8081] 7100/14650 elapsed=783.1s
-[v1-172.19.0.2-8081] 7200/14650 elapsed=817.9s
-[v1-172.19.0.2-8081] 7300/14650 elapsed=832.8s
-[v1-172.19.0.2-8081] 7400/14650 elapsed=843.1s
-[v1-172.19.0.2-8081] 7500/14650 elapsed=852.2s
-[v1-172.19.0.2-8081] 7600/14650 elapsed=861.3s
-[v1-172.19.0.2-8081] 7700/14650 elapsed=868.8s
-HIT {"target": "http://mme-monitor@172.19.0.2:8081/v1/maintenance/validate", "kind": "http", "outer_status": 405, "elapsed": 1.2, "body": "<!doctype html>\n<html lang=en>\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n", "status": 405, "phase": "v1-172.19.0.2-8081", "job": "/v1/maintenance/validate"}
-[v1-172.19.0.2-8081] 7800/14650 elapsed=878.5s
-[v1-172.19.0.2-8081] 7900/14650 elapsed=888.0s
-[v1-172.19.0.2-8081] 8000/14650 elapsed=901.1s
-[v1-172.19.0.2-8081] 8100/14650 elapsed=910.6s
-[v1-172.19.0.2-8081] 8200/14650 elapsed=919.4s
-[v1-172.19.0.2-8081] 8300/14650 elapsed=931.9s
-[v1-172.19.0.2-8081] 8400/14650 elapsed=939.6s
-[v1-172.19.0.2-8081] 8500/14650 elapsed=947.8s
-[v1-172.19.0.2-8081] 8600/14650 elapsed=957.2s
-[v1-172.19.0.2-8081] 8700/14650 elapsed=966.6s
-[v1-172.19.0.2-8081] 8800/14650 elapsed=974.6s
-[v1-172.19.0.2-8081] 8900/14650 elapsed=983.0s
-[v1-172.19.0.2-8081] 9000/14650 elapsed=992.1s
-[v1-172.19.0.2-8081] 9100/14650 elapsed=1001.1s
-[v1-172.19.0.2-8081] 9200/14650 elapsed=1008.8s
-[v1-172.19.0.2-8081] 9300/14650 elapsed=1016.7s
-[v1-172.19.0.2-8081] 9400/14650 elapsed=1033.4s
-[v1-172.19.0.2-8081] 9500/14650 elapsed=1082.0s
-[v1-172.19.0.2-8081] 9600/14650 elapsed=1098.3s
-[v1-172.19.0.2-8081] 9700/14650 elapsed=1110.0s
-[v1-172.19.0.2-8081] 9800/14650 elapsed=1119.8s
-[v1-172.19.0.2-8081] 9900/14650 elapsed=1130.7s
-[v1-172.19.0.2-8081] 10000/14650 elapsed=1139.3s
-[v1-172.19.0.2-8081] 10100/14650 elapsed=1147.8s
-[v1-172.19.0.2-8081] 10200/14650 elapsed=1158.9s
-[v1-172.19.0.2-8081] 10300/14650 elapsed=1168.3s
-[v1-172.19.0.2-8081] 10400/14650 elapsed=1179.5s
-[v1-172.19.0.2-8081] 10500/14650 elapsed=1187.8s
-[v1-172.19.0.2-8081] 10600/14650 elapsed=1198.3s
-[v1-172.19.0.2-8081] 10700/14650 elapsed=1206.2s
-[v1-172.19.0.2-8081] 10800/14650 elapsed=1213.7s
-[v1-172.19.0.2-8081] 10900/14650 elapsed=1221.1s
-[v1-172.19.0.2-8081] 11000/14650 elapsed=1230.5s
-[v1-172.19.0.2-8081] 11100/14650 elapsed=1239.7s
-[v1-172.19.0.2-8081] 11200/14650 elapsed=1247.5s
-[v1-172.19.0.2-8081] 11300/14650 elapsed=1256.7s
-[v1-172.19.0.2-8081] 11400/14650 elapsed=1264.8s
-[v1-172.19.0.2-8081] 11500/14650 elapsed=1273.4s
-[v1-172.19.0.2-8081] 11600/14650 elapsed=1281.6s
-[v1-172.19.0.2-8081] 11700/14650 elapsed=1291.0s
-[v1-172.19.0.2-8081] 11800/14650 elapsed=1321.3s
-[v1-172.19.0.2-8081] 11900/14650 elapsed=1357.5s
-[v1-172.19.0.2-8081] 12000/14650 elapsed=1369.5s
-[v1-172.19.0.2-8081] 12100/14650 elapsed=1379.8s
-[v1-172.19.0.2-8081] 12200/14650 elapsed=1391.2s
-[v1-172.19.0.2-8081] 12300/14650 elapsed=1405.5s
-[v1-172.19.0.2-8081] 12400/14650 elapsed=1416.4s
-[v1-172.19.0.2-8081] 12500/14650 elapsed=1425.4s
-[v1-172.19.0.2-8081] 12600/14650 elapsed=1436.1s
-[v1-172.19.0.2-8081] 12700/14650 elapsed=1447.2s
-[v1-172.19.0.2-8081] 12800/14650 elapsed=1456.9s
-[v1-172.19.0.2-8081] 12900/14650 elapsed=1467.4s
-[v1-172.19.0.2-8081] 13000/14650 elapsed=1477.4s
-[v1-172.19.0.2-8081] 13100/14650 elapsed=1486.2s
-[v1-172.19.0.2-8081] 13200/14650 elapsed=1493.7s
-[v1-172.19.0.2-8081] 13300/14650 elapsed=1502.4s
+===== DIRECT WEB MAINTENANCE TYPE/CONFUSION TESTS =====
+MAINT 'form-string:test' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:FEMTO-042' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:active' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:null' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:[]' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:{}' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:{"valid":true}' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:{"$ne":null}' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:{"$gt":""}' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'form-string:{"$regex":".*"}' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': None}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 0}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 1}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': []}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': {}}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': {'valid': True}}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': {'$ne': None}}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': {'$gt': ''}}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': {'$regex': '.*'}}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': ['test']}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 'test', 'valid': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 'test', 'active': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 'test', 'device_id': 'FEMTO-042', 'valid': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'device_id': 'FEMTO-042', 'valid': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 'test', 'role': 'maintenance'}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT "json:{'ticket': 'test', 'authorized': True}" -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&valid=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&active=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&authorized=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket[]=test' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket[valid]=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket[$ne]=x' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket[$gt]=' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&ticket=' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=&ticket=test' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test%00' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=%20test%20' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&device_id=FEMTO-042&valid=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+MAINT 'rawform:ticket=test&device=FEMTO-042&valid=true' -> 200 loc='' cookies=[] unlocked=False err='Invalid or expired maintenance ticket' bodylen=1215
+
+===== DONE =====
