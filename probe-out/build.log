@@ -22,10 +22,6 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 apt rc=0
 /usr/bin/riscv64-linux-gnu-as
 /usr/bin/riscv64-linux-gnu-ld
-probe/exp.s: Assembler messages:
-probe/exp.s:77: Error: illegal operands `sd t0,0x1000(s1)'
-probe/exp.s:116: Error: illegal operands `addi t1,s1,0x1000'
-as rc=1
-/usr/bin/riscv64-linux-gnu-ld.bfd: cannot find /tmp/exp.o: No such file or directory
-ld rc=1
-ls: cannot access '/tmp/exp': No such file or directory
+as rc=0
+ld rc=0
+-rwxr-xr-x 1 runner runner 2920 Oct 31 16:08 /tmp/exp
