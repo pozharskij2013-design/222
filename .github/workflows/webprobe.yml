@@ -15,7 +15,7 @@ jobs:
         run: |
           set +e
           mkdir -p /tmp/web-out
-          python3 -u webprobe/probe6.py 2>&1 | tee /tmp/web-out/RUN.log
+          python3 -u webprobe/probe7.py 2>&1 | tee /tmp/web-out/RUN.log
       - name: Save web probe output
         if: always()
         run: |
