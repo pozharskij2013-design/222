@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, pty, select, subprocess, sys, time
 
-HOST = "ey265v52i2ah2k9f@instances.ctfcup.online"
+HOST = "pfe1fsab36w2q3rc@instances.ctfcup.online"
 blob = open(sys.argv[1], "rb").read() if len(sys.argv) > 1 else b""
 
 master, slave = pty.openpty()
