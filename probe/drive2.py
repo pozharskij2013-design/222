@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os, pty, select, subprocess, sys, time
 
-HOST = "pfe1fsab36w2q3rc@instances.ctfcup.online"
+HOST = "1ses0iy04xqobymh@instances.ctfcup.online"
 blob = open(sys.argv[1], "rb").read() if len(sys.argv) > 1 else b""
 
 master, slave = pty.openpty()
@@ -91,10 +91,19 @@ cmd(f"ls -la {FNAME}; echo LSZ''1", b"LSZ1", 20)
 cmd(f"echo BCAT''_S; cat {FNAME}; echo BCAT''_E", b"BCAT_E", 30)
 cmd(f"chmod 755 {FNAME}; echo CHM''1", b"CHM1", 20)
 send(FNAME)
-send("echo RC=$?; echo ALL''DONE")
+send("echo RC=$?; sleep 2; cat /proc/uptime; echo HEALTH''OK; echo ALL''DONE")
 wait_for(b"ALLDONE", 90)
 time.sleep(1)
 pump()
+try:
+    send("exit")
+    for _ in range(50):
+        if proc.poll() is not None:
+            break
+        time.sleep(0.1)
+        pump()
+except Exception:
+    pass
 
 open("/tmp/out.txt", "wb").write(bytes(buf))
 try:

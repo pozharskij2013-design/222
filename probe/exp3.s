@@ -171,7 +171,7 @@ test_loop:
     lw a0, 96(sp)
     call print_hex64
     addi s8, s8, 1
-    li t0, 7
+    li t0, 5
     blt s8, t0, test_loop
     la a0, msg_fin
     li a1, 4
