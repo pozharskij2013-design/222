@@ -15,9 +15,7 @@ jobs:
         run: |
           set +e
           mkdir -p /tmp/web-out
-          python3 -m pip install -q Flask >/tmp/pip.log 2>&1 || true
-          python3 -u webprobe/probe3.py 2>&1 | tee /tmp/web-out/RUN.log
-          cp /tmp/pip.log /tmp/web-out/PIP.log || true
+          python3 -u webprobe/probe4.py 2>&1 | tee /tmp/web-out/RUN.log
       - name: Save web probe output
         if: always()
         run: |
