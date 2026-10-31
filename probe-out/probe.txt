@@ -1,0 +1,264 @@
++ getent hosts instances.ctfcup.online
+51.250.50.53    instances.ctfcup.online
++ timeout 10 bash -c 'exec 3<>/dev/tcp/instances.ctfcup.online/22; head -c 200 <&3; echo'
+SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
++ mkdir -p /home/runner/.ssh
++ ssh-keygen -t ed25519 -N '' -f /home/runner/.ssh/id_ed25519
+Generating public/private ed25519 key pair.
+Your identification has been saved in /home/runner/.ssh/id_ed25519
+Your public key has been saved in /home/runner/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:IS/190DtBQCA7S2fPDP9V/khNkExr7XE2PtPVA1YVw4 runner@runnervmnwato
+The key's randomart image is:
++--[ED25519 256]--+
+|       o.....*E +|
+|      . .   .o**.|
+|      ..o.  o..*=|
+|       +oo.. o+.+|
+|      . S+.oo.ooo|
+|       .  B..* +o|
+|           +..+ *|
+|              ..+|
+|               ..|
++----[SHA256]-----+
++ timeout 20 ssh-keyscan -v instances.ctfcup.online
++ head -n 80
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.15 pat OpenSSH* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: (no match)
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.15 pat OpenSSH* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ecdsa-sha2-nistp256
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.15 pat OpenSSH* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: (no match)
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.15 pat OpenSSH* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: (no match)
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.15 pat OpenSSH* compat 0x04000000
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: (no match)
+# instances.ctfcup.online:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
+# instances.ctfcup.online:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
+instances.ctfcup.online ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAPFezG6OiyFiH7/y3xJu9nAWGlepnd6NhrNKc47PXHMGWoUq7HS3AfYfi9IJcWDNYWisjFyorX3EPzM7Jxx4Rg=
+# instances.ctfcup.online:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
+# instances.ctfcup.online:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
+# instances.ctfcup.online:22 SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.15
++ timeout 30 ssh -vvv -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o BatchMode=yes -o ConnectTimeout=15 icssys2xpbxp94s8@instances.ctfcup.online 'echo CONNECTED; id; uname -a; pwd; ls -la'
++ tail -n 200
+debug2: compression stoc: none,zlib@openssh.com
+debug2: languages ctos: 
+debug2: languages stoc: 
+debug2: first_kex_follows 0 
+debug2: reserved 0 
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+debug3: send packet: type 5
+debug3: receive packet: type 7
+debug1: SSH2_MSG_EXT_INFO received
+debug3: kex_input_ext_info: extension server-sig-algs
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-256,rsa-sha2-512,ssh-rsa,ssh-dss>
+debug3: kex_input_ext_info: extension ping@openssh.com
+debug1: kex_ext_info_check_ver: ping@openssh.com=<0>
+debug3: receive packet: type 6
+debug2: service_accept: ssh-userauth
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug3: send packet: type 50
+debug3: receive packet: type 53
+debug3: input_userauth_banner: entering
+[+] Connecting...
+debug3: receive packet: type 52
+Authenticated to instances.ctfcup.online ([51.250.50.53]:22) using "none".
+debug2: fd 4 setting O_NONBLOCK
+debug2: fd 5 setting O_NONBLOCK
+debug1: channel 0: new session [client-session] (inactive timeout: 0)
+debug3: ssh_session2_open: channel_new: 0
+debug2: channel 0: send open
+debug3: send packet: type 90
+debug1: Requesting no-more-sessions@openssh.com
+debug3: send packet: type 80
+debug1: Entering interactive session.
+debug1: pledge: network
+debug3: client_repledge: enter
+debug2: client_loop: session QoS is now interactive
+debug2: fd 3 setting TCP_NODELAY
+debug3: set_sock_tos: set socket 3 IP_TOS 0xb8
+debug3: receive packet: type 91
+debug2: channel_input_open_confirmation: channel 0: callback start
+debug2: client_session2_setup: id 0
+debug1: Sending environment.
+debug3: Ignored env SHELL
+debug3: Ignored env SELENIUM_JAR_PATH
+debug3: Ignored env GITHUB_WORKSPACE
+debug3: Ignored env JAVA_HOME_11_X64
+debug3: Ignored env JAVA_HOME_25_X64
+debug3: Ignored env GITHUB_PATH
+debug3: Ignored env GITHUB_ACTION
+debug3: Ignored env JAVA_HOME
+debug3: Ignored env GITHUB_RUN_NUMBER
+debug3: Ignored env RUNNER_NAME
+debug3: Ignored env GRADLE_HOME
+debug3: Ignored env GITHUB_REPOSITORY_OWNER_ID
+debug3: Ignored env ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE
+debug3: Ignored env XDG_CONFIG_HOME
+debug3: Ignored env MEMORY_PRESSURE_WRITE
+debug3: Ignored env DOTNET_SKIP_FIRST_TIME_EXPERIENCE
+debug3: Ignored env ANT_HOME
+debug3: Ignored env GITHUB_TRIGGERING_ACTOR
+debug3: Ignored env GITHUB_REF_TYPE
+debug3: Ignored env HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS
+debug3: Ignored env ACTIONS_RUNNER_RETURN_JOB_RESULT_FOR_HOSTED
+debug3: Ignored env ANDROID_NDK
+debug3: Ignored env BOOTSTRAP_HASKELL_NONINTERACTIVE
+debug3: Ignored env PWD
+debug3: Ignored env PIPX_BIN_DIR
+debug3: Ignored env LOGNAME
+debug3: Ignored env GITHUB_ARTIFACTS_LIST
+debug3: Ignored env GITHUB_REPOSITORY_ID
+debug3: Ignored env GITHUB_ACTIONS
+debug3: Ignored env USE_BAZEL_FALLBACK_VERSION
+debug3: Ignored env ANDROID_NDK_LATEST_HOME
+debug3: Ignored env SYSTEMD_EXEC_PID
+debug3: Ignored env GITHUB_SHA
+debug3: Ignored env GITHUB_WORKFLOW_REF
+debug3: Ignored env POWERSHELL_DISTRIBUTION_CHANNEL
+debug3: Ignored env RUNNER_ENVIRONMENT
+debug3: Ignored env DOTNET_MULTILEVEL_LOOKUP
+debug3: Ignored env GITHUB_REF
+debug3: Ignored env RUNNER_OS
+debug3: Ignored env GITHUB_REF_PROTECTED
+debug3: Ignored env HOME
+debug3: Ignored env GITHUB_API_URL
+debug1: channel 0: setting env LANG = "C.UTF-8"
+debug2: channel 0: request env confirm 0
+debug3: send packet: type 98
+debug3: Ignored env GOROOT_1_25_X64
+debug3: Ignored env RUNNER_TRACKING_ID
+debug3: Ignored env RUNNER_ARCH
+debug3: Ignored env MEMORY_PRESSURE_WATCH
+debug3: Ignored env RUNNER_TEMP
+debug3: Ignored env GITHUB_STATE
+debug3: Ignored env EDGEWEBDRIVER
+debug3: Ignored env JAVA_HOME_21_X64
+debug3: Ignored env GITHUB_ENV
+debug3: Ignored env GITHUB_EVENT_PATH
+debug3: Ignored env INVOCATION_ID
+debug3: Ignored env GITHUB_EVENT_NAME
+debug3: Ignored env GITHUB_RUN_ID
+debug3: Ignored env JAVA_HOME_17_X64
+debug3: Ignored env ANDROID_NDK_HOME
+debug3: Ignored env GITHUB_STEP_SUMMARY
+debug3: Ignored env HOMEBREW_NO_AUTO_UPDATE
+debug3: Ignored env GITHUB_ACTOR
+debug3: Ignored env NVM_DIR
+debug3: Ignored env SGX_AESM_ADDR
+debug3: Ignored env GITHUB_RUN_ATTEMPT
+debug3: Ignored env ANDROID_HOME
+debug3: Ignored env GITHUB_GRAPHQL_URL
+debug3: Ignored env ACCEPT_EULA
+debug3: Ignored env USER
+debug3: Ignored env PSModulePath
+debug3: Ignored env GITHUB_SERVER_URL
+debug3: Ignored env PIPX_HOME
+debug3: Ignored env GECKOWEBDRIVER
+debug3: Ignored env CHROMEWEBDRIVER
+debug3: Ignored env SHLVL
+debug3: Ignored env ANDROID_SDK_ROOT
+debug3: Ignored env VCPKG_INSTALLATION_ROOT
+debug3: Ignored env GITHUB_ACTOR_ID
+debug3: Ignored env ACTIONS_ORCHESTRATION_ID
+debug3: Ignored env RUNNER_TOOL_CACHE
+debug3: Ignored env ImageVersion
+debug3: Ignored env DOTNET_NOLOGO
+debug3: Ignored env GITHUB_ARTIFACTS
+debug3: Ignored env GITHUB_WORKFLOW_SHA
+debug3: Ignored env GOROOT_1_24_X64
+debug3: Ignored env GITHUB_REF_NAME
+debug3: Ignored env GITHUB_JOB
+debug3: Ignored env XDG_RUNTIME_DIR
+debug3: Ignored env AZURE_EXTENSION_DIR
+debug3: Ignored env GOROOT_1_26_X64
+debug3: Ignored env GITHUB_REPOSITORY
+debug3: Ignored env CHROME_BIN
+debug3: Ignored env ANDROID_NDK_ROOT
+debug3: Ignored env GITHUB_RETENTION_DAYS
+debug3: Ignored env JOURNAL_STREAM
+debug3: Ignored env RUNNER_WORKSPACE
+debug3: Ignored env GITHUB_ACTION_REPOSITORY
+debug3: Ignored env HCA_CLOUD_PROVIDER
+debug3: Ignored env PATH
+debug3: Ignored env GITHUB_BASE_REF
+debug3: Ignored env GHCUP_INSTALL_BASE_PREFIX
+debug3: Ignored env CI
+debug3: Ignored env SWIFT_PATH
+debug3: Ignored env ImageOS
+debug3: Ignored env GITHUB_REPOSITORY_OWNER
+debug3: Ignored env GITHUB_HEAD_REF
+debug3: Ignored env GITHUB_ACTION_REF
+debug3: Ignored env ENABLE_RUNNER_TRACING
+debug3: Ignored env GITHUB_WORKFLOW
+debug3: Ignored env DEBIAN_FRONTEND
+debug3: Ignored env GITHUB_OUTPUT
+debug3: Ignored env AGENT_TOOLSDIRECTORY
+debug3: Ignored env _
+debug1: Sending command: echo CONNECTED; id; uname -a; pwd; ls -la
+debug2: channel 0: request exec confirm 1
+debug3: send packet: type 98
+debug3: client_repledge: enter
+debug1: pledge: fork
+debug2: channel_input_open_confirmation: channel 0: callback done
+debug2: channel 0: open confirm rwindow 2097152 rmax 32768
+debug2: channel 0: read failed rfd 4 maxlen 32768: Broken pipe
+debug2: channel 0: read failed
+debug2: chan_shutdown_read: channel 0: (i0 o0 sock -1 wfd 4 efd 6 [write])
+debug2: channel 0: input open -> drain
+debug2: client_loop: session QoS is now non-interactive
+debug3: set_sock_tos: set socket 3 IP_TOS 0x00
+debug2: channel 0: ibuf empty
+debug2: channel 0: send eof
+debug3: send packet: type 96
+debug2: channel 0: input drain -> closed
+debug3: receive packet: type 96
+debug2: channel 0: rcvd eof
+debug2: channel 0: output open -> drain
+debug2: channel 0: obuf empty
+debug2: chan_shutdown_write: channel 0: (i3 o1 sock -1 wfd 5 efd 6 [write])
+debug2: channel 0: output drain -> closed
+debug3: receive packet: type 97
+debug2: channel 0: rcvd close
+debug3: channel 0: will not send data after close
+debug2: channel 0: almost dead
+debug2: channel 0: gc: notify user
+debug2: channel 0: gc: user detached
+debug2: channel 0: send_close2
+debug2: channel 0: send close for remote id 0
+debug3: send packet: type 97
+debug2: channel 0: is dead
+debug2: channel 0: garbage collecting
+debug1: channel 0: free: client-session, nchannels 1
+debug3: channel 0: status: The following connections are open:
+  #0 client-session (t4 [session] r0 nm0 i3/0 o3/0 e[write]/0 fd -1/-1/6 sock -1 cc -1 nc0 io 0x00/0x00 B)
+
+debug2: client_loop: session QoS is now interactive
+debug3: set_sock_tos: set socket 3 IP_TOS 0xb8
+debug3: send packet: type 1
+Transferred: sent 1996, received 1324 bytes, in 0.9 seconds
+Bytes per second: sent 2108.0, received 1398.3
+debug1: Exit status -1
++ echo 'ssh exit: 0'
+ssh exit: 0
