@@ -39,6 +39,6 @@ jobs:
           cp /tmp/exp probe-out/exp.bin 2>/dev/null || true
           git config user.email "actions@github.com"
           git config user.name "github-actions"
-          git add probe-out/out.txt probe-out/raw.bin probe-out/build.log probe-out/exp.bin
+          git add -A probe-out/
           git commit -m "instance output [skip ci]" || exit 0
           git push origin HEAD:arena/c1306650-222
