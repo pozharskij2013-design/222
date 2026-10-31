@@ -1,0 +1,31 @@
+Selecting previously unselected package binutils-riscv64-linux-gnu.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 212715 files and directories currently installed.)
+Preparing to unpack .../binutils-riscv64-linux-gnu_2.46-3ubuntu2_amd64v3.deb ...
+Unpacking binutils-riscv64-linux-gnu (2.46-3ubuntu2) ...
+Setting up binutils-riscv64-linux-gnu (2.46-3ubuntu2) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Not building database; man-db/auto-update is not 'true'.
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+
+Service restarts being deferred:
+ systemctl restart hosted-compute-agent.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+apt rc=0
+/usr/bin/riscv64-linux-gnu-as
+/usr/bin/riscv64-linux-gnu-ld
+probe/exp.s: Assembler messages:
+probe/exp.s:77: Error: illegal operands `sd t0,0x1000(s1)'
+probe/exp.s:116: Error: illegal operands `addi t1,s1,0x1000'
+as rc=1
+/usr/bin/riscv64-linux-gnu-ld.bfd: cannot find /tmp/exp.o: No such file or directory
+ld rc=1
+ls: cannot access '/tmp/exp': No such file or directory
