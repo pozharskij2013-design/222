@@ -1,18 +1,19 @@
 export PS1='P> '
-echo __START2__
-busybox
-ls -la /bin
-ls -la /sbin
-ls -la /usr
-ls -R /usr
-ls -la /lib
-ls -R /lib
-ls -la /etc
-cat /init
-cat /proc/self/status
-ls -la /sys/class/ghostvector
-ls -la /sys/class/ghostvector/*
-ls -la /sys/module/ghostvector_lab
-cat /sys/module/ghostvector_lab/coresize
-find / -xdev -type f 2>/dev/null
-echo __END2__
+echo __S3__
+ls -la /usr/bin
+ls -la /usr/sbin
+ls -la /usr/lib
+ls -la /lib/modules
+ls -la /run
+ls -la /tmp
+ls -la /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/
+ls -la /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/flag/
+cat /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/flag/raw
+echo "catflag rc=$?"
+for d in /proc/[0-9]*; do echo "== $d"; cat $d/cmdline; echo; ls -la $d/exe; done
+cat /proc/net/route
+cat /proc/net/arp
+ls -la /sys/devices/virtual/ghostvector/ghostvector/
+cat /sys/devices/virtual/ghostvector/ghostvector/uevent
+for f in /usr/bin/*; do echo "===== $f"; $f --help </dev/null; echo "[rc=$?]"; done
+echo __E3__
