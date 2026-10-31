@@ -20,8 +20,8 @@ jobs:
             curl -vk --connect-timeout 10 --max-time 25 http://9taux6shw8cpbvs5.instances.ctfcup.online/
             echo '--- curl https ---'
             curl -vk --connect-timeout 10 --max-time 25 https://9taux6shw8cpbvs5.instances.ctfcup.online/
-            echo '--- python probe ---'
-            python3 webprobe/probe.py
+            echo '--- python SSRF scan ---'
+            python3 webprobe/probe2.py
           } > /tmp/run.log 2>&1
           mkdir -p /tmp/web-out
           cp /tmp/run.log /tmp/web-out/RUN.log || true
