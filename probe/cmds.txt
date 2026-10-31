@@ -1,19 +1,22 @@
 export PS1='P> '
-echo __S3__
-ls -la /usr/bin
-ls -la /usr/sbin
-ls -la /usr/lib
-ls -la /lib/modules
-ls -la /run
-ls -la /tmp
-ls -la /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/
-ls -la /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/flag/
-cat /sys/firmware/qemu_fw_cfg/by_name/opt/ctfcup/flag/raw
-echo "catflag rc=$?"
-for d in /proc/[0-9]*; do echo "== $d"; cat $d/cmdline; echo; ls -la $d/exe; done
-cat /proc/net/route
-cat /proc/net/arp
-ls -la /sys/devices/virtual/ghostvector/ghostvector/
-cat /sys/devices/virtual/ghostvector/ghostvector/uevent
-for f in /usr/bin/*; do echo "===== $f"; $f --help </dev/null; echo "[rc=$?]"; done
-echo __E3__
+echo __S4__
+ls -la /usr/lib/ghostvector
+cat /proc/meminfo
+ls -la /proc/55/fd
+cat /proc/55/status
+cat /proc/55/maps
+echo "maps rc=$?"
+ls -la /sys/module/ghostvector_lab/sections
+ls -la /proc/kallsyms /proc/kcore /dev/mem /dev/kmem
+cat /proc/sys/kernel/kptr_restrict
+cat /proc/sys/kernel/perf_event_paranoid
+echo BEGIN_GVLIB
+cat /usr/lib/ghostvector/*
+echo BEGIN_FLAGD_BIN
+cat /usr/sbin/flagd
+echo BEGIN_VECDIAG_BIN
+cat /usr/bin/vecdiag
+echo BEGIN_KO_BIN
+cat /lib/modules/ghostvector_lab.ko
+echo END_ALL_BINS
+echo __E4__

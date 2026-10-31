@@ -23,8 +23,9 @@ jobs:
         run: |
           mkdir -p probe-out
           cp /tmp/out_clean.txt probe-out/out.txt 2>/dev/null || echo "no output" > probe-out/out.txt
+          cp /tmp/out.txt probe-out/raw.bin 2>/dev/null || true
           git config user.email "actions@github.com"
           git config user.name "github-actions"
-          git add probe-out/out.txt
+          git add probe-out/out.txt probe-out/raw.bin
           git commit -m "instance output [skip ci]" || exit 0
           git push origin HEAD:arena/c1306650-222
