@@ -15,10 +15,17 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
-          sudo apt-get update -qq && sudo apt-get install -y -qq binutils-riscv64-linux-gnu > /tmp/apt.log 2>&1 || tail -n 30 /tmp/apt.log
-          riscv64-linux-gnu-as -march=rv64gcv -o /tmp/exp.o probe/exp.s
-          riscv64-linux-gnu-ld -o /tmp/exp /tmp/exp.o
-          ls -l /tmp/exp
+          set +e
+          {
+            sudo apt-get update -qq && sudo apt-get install -y -qq binutils-riscv64-linux-gnu
+            echo "apt rc=$?"
+            which riscv64-linux-gnu-as riscv64-linux-gnu-ld
+            riscv64-linux-gnu-as -march=rv64gcv -o /tmp/exp.o probe/exp.s
+            echo "as rc=$?"
+            riscv64-linux-gnu-ld -o /tmp/exp /tmp/exp.o
+            echo "ld rc=$?"
+            ls -l /tmp/exp
+          } > /tmp/build.log 2>&1
           python3 probe/drive2.py /tmp/exp || true
           # strip ANSI escapes and CR for readability
           sed -e 's/\x1b\[[0-9;?]*[a-zA-Z]//g' -e 's/\r//g' /tmp/out.txt > /tmp/out_clean.txt || true
