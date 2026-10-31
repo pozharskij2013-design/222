@@ -1,0 +1,13 @@
+const backhaulStatus = document.getElementById("backhaul-status");
+const managementPeer = "http://mme-monitor:8081/health";
+
+fetch(`/api/diagnostics/connectivity-test?target=${encodeURIComponent(managementPeer)}`)
+  .then((response) => response.json())
+  .then((result) => {
+    backhaulStatus.textContent = result.status === 200
+      ? "Backhaul monitor: reachable"
+      : "Backhaul monitor: degraded";
+  })
+  .catch(() => {
+    backhaulStatus.textContent = "Backhaul monitor: unavailable";
+  });

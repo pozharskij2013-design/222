@@ -1,0 +1,1989 @@
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/
+STATUS 200 BYTES 2366 SHA 8f6f3437f2be FILE http_9taux6shw8cpbvs5.instances.ctfcup.online.200.8f6f3437f2be.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:22 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 2366
+Vary: Cookie
+Connection: close
+---BODY---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Femtocell Management</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 1100px; margin: 0 auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #2f3c4d; padding-bottom: 18px; }
+    h1 { margin: 0; }
+    .muted { color: #9aa9bb; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 22px 0; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 16px; }
+    .ok { color: #8ee2a5; }
+    code, pre, textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    textarea { width: 100%; min-height: 100px; box-sizing: border-box; padding: 12px; resize: vertical; color: #eaf2ff; background: #080c11; border: 1px solid #53677e; border-radius: 7px; }
+    button { padding: 10px 18px; margin-top: 10px; border: 0; border-radius: 7px; color: #fff; background: #2a659a; cursor: pointer; }
+    pre { min-height: 180px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; background: #080c11; border-radius: 7px; border: 1px solid #253242; }
+    .warning { border-left: 4px solid #d59d49; background: #282216; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Femtocell Management</h1>
+      <p class="muted">Device ID: FEMTO-042 · firmware 3.8.12</p>
+    </div>
+    <span class="ok">● S1 link: ready</span>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>MME connection</h2>
+      <p class="ok">connected</p>
+      <p class="muted">management target: hidden</p>
+    </section>
+    <section class="card">
+      <h2>Support link</h2>
+      <p class="ok">connected</p>
+      <p class="muted">service target: hidden</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Maintenance console</h2>
+    
+      <p class="muted">locked · maintenance authorization required</p>
+      <a href="/maintenance">Open maintenance interface</a>
+    
+  </section>
+  <p id="backhaul-status" class="muted">Backhaul monitor: checking…</p>
+  <script src="/static/dashboard.js" defer></script>
+</body>
+</html>
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/
+STATUS 200 BYTES 2366 SHA 8f6f3437f2be FILE https_9taux6shw8cpbvs5.instances.ctfcup.online.200.8f6f3437f2be.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:23 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 2366
+Vary: Cookie
+Connection: close
+---BODY---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Femtocell Management</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 1100px; margin: 0 auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #2f3c4d; padding-bottom: 18px; }
+    h1 { margin: 0; }
+    .muted { color: #9aa9bb; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 22px 0; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 16px; }
+    .ok { color: #8ee2a5; }
+    code, pre, textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    textarea { width: 100%; min-height: 100px; box-sizing: border-box; padding: 12px; resize: vertical; color: #eaf2ff; background: #080c11; border: 1px solid #53677e; border-radius: 7px; }
+    button { padding: 10px 18px; margin-top: 10px; border: 0; border-radius: 7px; color: #fff; background: #2a659a; cursor: pointer; }
+    pre { min-height: 180px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; background: #080c11; border-radius: 7px; border: 1px solid #253242; }
+    .warning { border-left: 4px solid #d59d49; background: #282216; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Femtocell Management</h1>
+      <p class="muted">Device ID: FEMTO-042 · firmware 3.8.12</p>
+    </div>
+    <span class="ok">● S1 link: ready</span>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>MME connection</h2>
+      <p class="ok">connected</p>
+      <p class="muted">management target: hidden</p>
+    </section>
+    <section class="card">
+      <h2>Support link</h2>
+      <p class="ok">connected</p>
+      <p class="muted">service target: hidden</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Maintenance console</h2>
+    
+      <p class="muted">locked · maintenance authorization required</p>
+      <a href="/maintenance">Open maintenance interface</a>
+    
+  </section>
+  <p id="backhaul-status" class="muted">Backhaul monitor: checking…</p>
+  <script src="/static/dashboard.js" defer></script>
+</body>
+</html>
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/maintenance
+STATUS 200 BYTES 1157 SHA 27bc32cc90a4 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_maintenance.200.27bc32cc90a4.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:23 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1157
+Connection: close
+---BODY---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maintenance authorization</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }
+    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }
+    button { background: #2a659a; cursor: pointer; }
+    .error { color: #ff9e9e; }
+    .muted { color: #9aa9bb; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Maintenance authorization</h1>
+    <p class="muted">Enter the active ticket issued by field-support dispatch.</p>
+    
+    <form method="post">
+      <label for="ticket">Maintenance ticket</label>
+      <input id="ticket" name="ticket" autocomplete="off" required>
+      <button type="submit">Unlock console</button>
+    </form>
+  </div>
+</body>
+</html>
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/static/dashboard.js
+STATUS 200 BYTES 500 SHA cbb49cae35c3 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_static_dashboard.js.200.cbb49cae35c3.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:24 GMT
+Content-Disposition: inline; filename=dashboard.js
+Content-Type: text/javascript; charset=utf-8
+Content-Length: 500
+Last-Modified: Wed, 28 Oct 2026 19:32:03 GMT
+Cache-Control: no-cache
+ETag: "1793215923.0-500-2931690342"
+Date: Sat, 31 Oct 2026 16:25:24 GMT
+Accept-Ranges: bytes
+Connection: close
+---BODY---
+const backhaulStatus = document.getElementById("backhaul-status");
+const managementPeer = "http://mme-monitor:8081/health";
+
+fetch(`/api/diagnostics/connectivity-test?target=${encodeURIComponent(managementPeer)}`)
+  .then((response) => response.json())
+  .then((result) => {
+    backhaulStatus.textContent = result.status === 200
+      ? "Backhaul monitor: reachable"
+      : "Backhaul monitor: degraded";
+  })
+  .catch(() => {
+    backhaulStatus.textContent = "Backhaul monitor: unavailable";
+  });
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/maintenance
+STATUS 200 BYTES 1157 SHA 27bc32cc90a4 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_maintenance.200.27bc32cc90a4.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:25 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1157
+Connection: close
+---BODY---
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maintenance authorization</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 560px; margin: 80px auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 22px; }
+    input, button { width: 100%; box-sizing: border-box; padding: 11px; margin-top: 8px; border-radius: 6px; border: 1px solid #53677e; background: #080c11; color: inherit; }
+    button { background: #2a659a; cursor: pointer; }
+    .error { color: #ff9e9e; }
+    .muted { color: #9aa9bb; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Maintenance authorization</h1>
+    <p class="muted">Enter the active ticket issued by field-support dispatch.</p>
+    
+    <form method="post">
+      <label for="ticket">Maintenance ticket</label>
+      <input id="ticket" name="ticket" autocomplete="off" required>
+      <button type="submit">Unlock console</button>
+    </form>
+  </div>
+</body>
+</html>
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/static/dashboard.js
+STATUS 200 BYTES 500 SHA cbb49cae35c3 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_static_dashboard.js.200.cbb49cae35c3.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:25 GMT
+Content-Disposition: inline; filename=dashboard.js
+Content-Type: text/javascript; charset=utf-8
+Content-Length: 500
+Last-Modified: Wed, 28 Oct 2026 19:32:03 GMT
+Cache-Control: no-cache
+ETag: "1793215923.0-500-2931690342"
+Date: Sat, 31 Oct 2026 16:25:25 GMT
+Accept-Ranges: bytes
+Connection: close
+---BODY---
+const backhaulStatus = document.getElementById("backhaul-status");
+const managementPeer = "http://mme-monitor:8081/health";
+
+fetch(`/api/diagnostics/connectivity-test?target=${encodeURIComponent(managementPeer)}`)
+  .then((response) => response.json())
+  .then((result) => {
+    backhaulStatus.textContent = result.status === 200
+      ? "Backhaul monitor: reachable"
+      : "Backhaul monitor: degraded";
+  })
+  .catch(() => {
+    backhaulStatus.textContent = "Backhaul monitor: unavailable";
+  });
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/robots.txt
+STATUS 200 BYTES 35 SHA 0f6ff9a2756a FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_robots.txt.200.0f6ff9a2756a.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:28 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 35
+Connection: close
+---BODY---
+User-agent: *
+Disallow: /internal/
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/sitemap.xml
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_sitemap.xml.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:28 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/.well-known/security.txt
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_.well-known_security.txt.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:29 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/favicon.ico
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_favicon.ico.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:30 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/login
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_login.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:32 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/logout
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_logout.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:33 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/admin
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_admin.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:33 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/panel
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_panel.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:33 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/console
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_console.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:34 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/dashboard
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_dashboard.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:37 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/status
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_status.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:38 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/health
+STATUS 200 BYTES 42 SHA 0c6774b793a0 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_health.200.0c6774b793a0.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:38 GMT
+Content-Type: application/json
+Content-Length: 42
+Connection: close
+---BODY---
+{"service":"femtocell-web","status":"ok"}
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/healthz
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_healthz.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:39 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:39 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:40 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/status
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_status.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:40 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/health
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_health.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:41 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/info
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_info.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:41 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/version
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_version.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:42 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/openapi.json
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_openapi.json.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:42 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/openapi.json
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_openapi.json.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:43 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/swagger
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_swagger.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:43 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/swagger/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_swagger.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:43 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/docs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_docs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:44 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/redoc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_redoc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:44 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/api/docs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_api_docs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:45 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/debug
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_debug.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:45 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/metrics
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_metrics.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:45 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/config
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_config.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:46 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/settings
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_settings.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:46 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/cgi-bin/luci
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_cgi-bin_luci.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:46 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/luci
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_luci.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:47 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/ubus
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_ubus.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:47 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/rpc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_rpc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:48 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/jsonrpc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_jsonrpc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:48 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/tr069
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_tr069.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:48 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/acs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_acs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:49 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/management
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_management.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:49 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/diag
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_diag.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:50 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/diagnostics
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_diagnostics.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:50 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/trace
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_trace.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:50 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/ping
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_ping.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:51 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/terminal
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_terminal.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:51 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/shell
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_shell.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:51 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/ws
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_ws.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:52 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/socket.io/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_socket.io.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:52 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/sockjs-node/info
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_sockjs-node_info.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:53 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/.git/HEAD
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_.git_HEAD.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:53 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/.env
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_.env.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:53 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/backup
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_backup.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:54 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/dump
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_dump.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:54 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/logs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_logs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:55 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/log
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_log.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:55 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/session
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_session.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:55 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/sessions
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_sessions.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:56 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/memory
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_memory.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:56 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/pcap
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_pcap.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:57 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET http://9taux6shw8cpbvs5.instances.ctfcup.online/capture
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE http_9taux6shw8cpbvs5.instances.ctfcup.online_capture.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:57 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/robots.txt
+STATUS 200 BYTES 35 SHA 0f6ff9a2756a FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_robots.txt.200.0f6ff9a2756a.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:58 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 35
+Connection: close
+---BODY---
+User-agent: *
+Disallow: /internal/
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/sitemap.xml
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_sitemap.xml.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:58 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/.well-known/security.txt
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_.well-known_security.txt.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:59 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/favicon.ico
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_favicon.ico.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:25:59 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/login
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_login.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:00 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/logout
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_logout.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:00 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/admin
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_admin.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:01 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/panel
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_panel.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:02 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/console
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_console.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:02 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/dashboard
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_dashboard.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:03 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/status
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_status.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:03 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/health
+STATUS 200 BYTES 42 SHA 0c6774b793a0 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_health.200.0c6774b793a0.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:04 GMT
+Content-Type: application/json
+Content-Length: 42
+Connection: close
+---BODY---
+{"service":"femtocell-web","status":"ok"}
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/healthz
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_healthz.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:04 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:05 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:05 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/status
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_status.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:06 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/health
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_health.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:06 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/info
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_info.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:07 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/version
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_version.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:07 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/openapi.json
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_openapi.json.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:08 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/openapi.json
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_openapi.json.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:09 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/swagger
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_swagger.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:09 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/swagger/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_swagger.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:10 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/docs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_docs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:10 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/redoc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_redoc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/api/docs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_api_docs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/debug
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_debug.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:12 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/metrics
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_metrics.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:12 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/config
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_config.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/settings
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_settings.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:13 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/cgi-bin/luci
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_cgi-bin_luci.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:14 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/luci
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_luci.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:14 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/ubus
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_ubus.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:15 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/rpc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_rpc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:15 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/jsonrpc
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_jsonrpc.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:16 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/tr069
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_tr069.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:16 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/acs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_acs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:17 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/management
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_management.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:17 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/diag
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_diag.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:18 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/diagnostics
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_diagnostics.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:18 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/trace
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_trace.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:19 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/ping
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_ping.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:20 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/terminal
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_terminal.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:20 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/shell
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_shell.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:21 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/ws
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_ws.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:21 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/socket.io/
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_socket.io.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:22 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/sockjs-node/info
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_sockjs-node_info.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:22 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/.git/HEAD
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_.git_HEAD.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:23 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/.env
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_.env.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:23 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/backup
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_backup.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:24 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/dump
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_dump.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:24 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/logs
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_logs.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:25 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/log
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_log.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:25 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/session
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_session.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:26 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/sessions
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_sessions.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:27 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/memory
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_memory.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:27 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/pcap
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_pcap.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:28 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+=== GET https://9taux6shw8cpbvs5.instances.ctfcup.online/capture
+STATUS 404 BYTES 207 SHA e9639e3c4681 FILE https_9taux6shw8cpbvs5.instances.ctfcup.online_capture.404.e9639e3c4681.bin
+Server: Werkzeug/3.1.9 Python/3.12.16
+Date: Sat, 31 Oct 2026 16:26:28 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 207
+Connection: close
+---BODY---
+<!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+

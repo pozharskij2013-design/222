@@ -1,0 +1,199 @@
+runnervmnwato
+51.250.50.53    9taux6shw8cpbvs5.instances.ctfcup.online
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0* Host 9taux6shw8cpbvs5.instances.ctfcup.online:80 was resolved.
+* IPv6: (none)
+* IPv4: 51.250.50.53
+*   Trying 51.250.50.53:80...
+* Established connection to 9taux6shw8cpbvs5.instances.ctfcup.online (51.250.50.53 port 80) from 10.1.0.90 port 38878 
+* using HTTP/1.x
+> GET / HTTP/1.1
+> Host: 9taux6shw8cpbvs5.instances.ctfcup.online
+> User-Agent: curl/8.18.0
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Server: Werkzeug/3.1.9 Python/3.12.16
+< Date: Sat, 31 Oct 2026 16:25:20 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 2366
+< Vary: Cookie
+< Connection: close
+< 
+{ [2366 bytes data]
+100   2366 100   2366   0      0   5214      0                              0100   2366 100   2366   0      0   5213      0                              0100   2366 100   2366   0      0   5212      0                              0
+* shutting down connection #0
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Femtocell Management</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 1100px; margin: 0 auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #2f3c4d; padding-bottom: 18px; }
+    h1 { margin: 0; }
+    .muted { color: #9aa9bb; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 22px 0; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 16px; }
+    .ok { color: #8ee2a5; }
+    code, pre, textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    textarea { width: 100%; min-height: 100px; box-sizing: border-box; padding: 12px; resize: vertical; color: #eaf2ff; background: #080c11; border: 1px solid #53677e; border-radius: 7px; }
+    button { padding: 10px 18px; margin-top: 10px; border: 0; border-radius: 7px; color: #fff; background: #2a659a; cursor: pointer; }
+    pre { min-height: 180px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; background: #080c11; border-radius: 7px; border: 1px solid #253242; }
+    .warning { border-left: 4px solid #d59d49; background: #282216; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Femtocell Management</h1>
+      <p class="muted">Device ID: FEMTO-042 · firmware 3.8.12</p>
+    </div>
+    <span class="ok">● S1 link: ready</span>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>MME connection</h2>
+      <p class="ok">connected</p>
+      <p class="muted">management target: hidden</p>
+    </section>
+    <section class="card">
+      <h2>Support link</h2>
+      <p class="ok">connected</p>
+      <p class="muted">service target: hidden</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Maintenance console</h2>
+    
+      <p class="muted">locked · maintenance authorization required</p>
+      <a href="/maintenance">Open maintenance interface</a>
+    
+  </section>
+  <p id="backhaul-status" class="muted">Backhaul monitor: checking…</p>
+  <script src="/static/dashboard.js" defer></script>
+</body>
+</html>--- curl https ---
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0* Host 9taux6shw8cpbvs5.instances.ctfcup.online:443 was resolved.
+* IPv6: (none)
+* IPv4: 51.250.50.53
+*   Trying 51.250.50.53:443...
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [1595 bytes data]
+* SSL Trust: peer verification disabled
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [6 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [3438 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256 / x25519 / id-ecPublicKey
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*   subject: CN=*.instances.ctfcup.online
+*   start date: Oct 30 18:28:07 2026 GMT
+*   expire date: Jan 28 18:28:06 2027 GMT
+*   issuer: C=US; O=Let's Encrypt; CN=YE1
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 1: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 2: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using ecdsa-with-SHA384
+*   Certificate level 3: Public key type EC/secp384r1 (384/192 Bits/secBits), signed using sha256WithRSAEncryption
+*  SSL certificate verification failed, continuing anyway!
+* Established connection to 9taux6shw8cpbvs5.instances.ctfcup.online (51.250.50.53 port 443) from 10.1.0.90 port 57792 
+  0      0   0      0   0      0      0      0           00:01              0* using HTTP/1.x
+} [5 bytes data]
+> GET / HTTP/1.1
+> Host: 9taux6shw8cpbvs5.instances.ctfcup.online
+> User-Agent: curl/8.18.0
+> Accept: */*
+> 
+* Request completely sent off
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< Server: Werkzeug/3.1.9 Python/3.12.16
+< Date: Sat, 31 Oct 2026 16:25:21 GMT
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 2366
+< Vary: Cookie
+< Connection: close
+< 
+{ [996 bytes data]
+100   2366 100   2366   0      0   1845      0   00:01   00:01           1845100   2366 100   2366   0      0   1845      0   00:01   00:01           1845100   2366 100   2366   0      0   1845      0   00:01   00:01           1845
+* shutting down connection #0
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Femtocell Management</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { max-width: 1100px; margin: 0 auto; padding: 24px; background: #0e141b; color: #ecf2fa; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid #2f3c4d; padding-bottom: 18px; }
+    h1 { margin: 0; }
+    .muted { color: #9aa9bb; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 22px 0; }
+    .card { background: #171f2a; border: 1px solid #2f3c4d; border-radius: 10px; padding: 16px; }
+    .ok { color: #8ee2a5; }
+    code, pre, textarea { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    textarea { width: 100%; min-height: 100px; box-sizing: border-box; padding: 12px; resize: vertical; color: #eaf2ff; background: #080c11; border: 1px solid #53677e; border-radius: 7px; }
+    button { padding: 10px 18px; margin-top: 10px; border: 0; border-radius: 7px; color: #fff; background: #2a659a; cursor: pointer; }
+    pre { min-height: 180px; white-space: pre-wrap; overflow-wrap: anywhere; padding: 14px; background: #080c11; border-radius: 7px; border: 1px solid #253242; }
+    .warning { border-left: 4px solid #d59d49; background: #282216; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Femtocell Management</h1>
+      <p class="muted">Device ID: FEMTO-042 · firmware 3.8.12</p>
+    </div>
+    <span class="ok">● S1 link: ready</span>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>MME connection</h2>
+      <p class="ok">connected</p>
+      <p class="muted">management target: hidden</p>
+    </section>
+    <section class="card">
+      <h2>Support link</h2>
+      <p class="ok">connected</p>
+      <p class="muted">service target: hidden</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Maintenance console</h2>
+    
+      <p class="muted">locked · maintenance authorization required</p>
+      <a href="/maintenance">Open maintenance interface</a>
+    
+  </section>
+  <p id="backhaul-status" class="muted">Backhaul monitor: checking…</p>
+  <script src="/static/dashboard.js" defer></script>
+</body>
+</html>--- python probe ---
+wrote 122 results
