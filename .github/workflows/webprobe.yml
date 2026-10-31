@@ -1,0 +1,38 @@
+name: webprobe
+on:
+  push:
+    branches: ["arena/c1306650-222"]
+    paths: ["webprobe/**", ".github/workflows/webprobe.yml"]
+permissions:
+  contents: write
+jobs:
+  webprobe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe web instance
+        run: |
+          set +e
+          {
+            hostname
+            getent hosts 9taux6shw8cpbvs5.instances.ctfcup.online
+            curl -vk --connect-timeout 10 --max-time 25 http://9taux6shw8cpbvs5.instances.ctfcup.online/
+            echo '--- curl https ---'
+            curl -vk --connect-timeout 10 --max-time 25 https://9taux6shw8cpbvs5.instances.ctfcup.online/
+            echo '--- python probe ---'
+            python3 webprobe/probe.py
+          } > /tmp/run.log 2>&1
+          mkdir -p /tmp/web-out
+          cp /tmp/run.log /tmp/web-out/RUN.log || true
+      - name: Save web probe output
+        if: always()
+        run: |
+          rm -rf web-out
+          mkdir -p web-out
+          cp -a /tmp/web-out/. web-out/ 2>/dev/null || true
+          git config user.email "actions@github.com"
+          git config user.name "github-actions"
+          git add -A web-out/
+          git commit -m "web probe output [skip ci]" || exit 0
+          git push origin HEAD:arena/c1306650-222
