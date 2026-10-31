@@ -33,7 +33,7 @@ while time.time() - start < timeout_total:
         os.write(master, b"\n")
         time.sleep(0.5)
         os.write(master, cmds.replace(b"\n", b"\r\n"))
-        os.write(master, b"echo DONE_$((6*7))\r\n")
+        os.write(master, b"echo DONE_4''2\r\n")
         sent = True
     if sent and b"DONE_42" in bytes(out):
         break

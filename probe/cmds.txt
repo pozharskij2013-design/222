@@ -1,30 +1,18 @@
-export TERM=dumb PS1='PROMPT> '
-echo __START__
-id
-whoami
-hostname
-uname -a
-cat /proc/cpuinfo
-cat /proc/cmdline
-pwd
-ls -la
-ls -la /
-ls -la /home /root /opt 2>&1
-ls -la /dev
-cat /proc/iomem
-cat /proc/devices
-cat /proc/interrupts
-cat /proc/modules
-ls -la /sys/class
-ls -la /sys/bus/pci/devices/ 2>&1
-ls -la /sys/class/uio /sys/class/misc 2>&1
-which python3 python gcc cc clang make busybox devmem xxd hexdump od dd strace gdb socat nc curl wget file readelf objdump lspci setpci 2>&1
-busybox --list 2>/dev/null | tr '\n' ' '; echo
-mount
-df -h
-env
-cat /etc/passwd
-ls -la /usr/bin /usr/local/bin /usr/sbin 2>&1 | head -n 300
-find / -xdev \( -iname '*flag*' -o -iname '*accel*' -o -iname '*calib*' -o -iname '*dma*' -o -iname '*secret*' -o -iname '*.ko' \) 2>/dev/null | head -n 300
-dmesg 2>&1 | head -n 400
-echo __END__
+export PS1='P> '
+echo __START2__
+busybox
+ls -la /bin
+ls -la /sbin
+ls -la /usr
+ls -R /usr
+ls -la /lib
+ls -R /lib
+ls -la /etc
+cat /init
+cat /proc/self/status
+ls -la /sys/class/ghostvector
+ls -la /sys/class/ghostvector/*
+ls -la /sys/module/ghostvector_lab
+cat /sys/module/ghostvector_lab/coresize
+find / -xdev -type f 2>/dev/null
+echo __END2__
