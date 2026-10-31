@@ -139,7 +139,7 @@ _start:
     bltz a0, die
     mv s2, a0
 
-    li s8, 0
+    li s8, 4
 test_loop:
     la a0, msg_tst
     li a1, 2
